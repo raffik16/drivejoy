@@ -280,13 +280,28 @@
 }
 
 .predictionsDemo {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  position: relative;
+  height: 100vh;
   
   @include slide-up(1s);
   animation-delay: 1.5s;
   animation-fill-mode: both;
+}
+
+.marqueeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  animation: scrollUp 60s linear infinite; /* 6 cards * 3s = 18s */
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-6 * (140px + var(--space-4)))); /* Move up by 6 card heights */
+  }
 }
 
 .demoCard {
@@ -296,6 +311,8 @@
   box-shadow: var(--shadow-lg);
   color: var(--color-gray-900);
   transition: var(--transition-base);
+  flex-shrink: 0;
+  min-height: 140px;
   
   &:hover {
     transform: translateX(-5px);

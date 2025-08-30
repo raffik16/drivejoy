@@ -1,11 +1,65 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { WaitlistModal } from '@/components/waitlist/WaitlistModal/WaitlistModal';
 import styles from './Hero.module.scss';
 
+const demoCards = [
+  {
+    sport: '🏈 NFL',
+    confidence: '2.3% Edge Detected',
+    matchup: 'Chiefs @ Bills',
+    pick: 'Chiefs -3.5',
+    result: '⚖️ ANALYSIS'
+  },
+  {
+    sport: '🏀 NBA',
+    confidence: '1.8% Edge Detected',
+    matchup: 'Lakers @ Warriors',
+    pick: 'Over 215.5',
+    result: '📊 VALUE'
+  },
+  {
+    sport: '⚾ MLB',
+    confidence: 'No Edge Found',
+    matchup: 'Yankees @ Red Sox',
+    pick: 'Yankees ML',
+    result: '🚫 PASS'
+  },
+  {
+    sport: '🏒 NHL',
+    confidence: '3.1% Edge Detected',
+    matchup: 'Rangers @ Bruins',
+    pick: 'Under 6.5',
+    result: '⚖️ ANALYSIS'
+  },
+  {
+    sport: '⚽ Soccer',
+    confidence: '2.7% Edge Detected',
+    matchup: 'Chelsea vs Arsenal',
+    pick: 'Draw +240',
+    result: '📊 VALUE'
+  },
+  {
+    sport: '🏈 NFL',
+    confidence: 'Weather Alert',
+    matchup: 'Dolphins @ Bills',
+    pick: 'Under 42.5',
+    result: '🌨️ WEATHER'
+  }
+];
+
 export function Hero() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCardIndex((prev) => (prev + 1) % demoCards.length);
+    }, 3000); // Change card every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -15,29 +69,29 @@ export function Hero() {
             {/* Main Headlines */}
             <div className={styles.headlines}>
               <h1 className={styles.title}>
-                Win More Games with{' '}
-                <span className={styles.highlight}>AI-Powered</span>{' '}
-                Sports Predictions
+                Make Better Bets with{' '}
+                <span className={styles.highlight}>Smart Data</span>{' '}
+                Analysis
               </h1>
               <p className={styles.subtitle}>
-                Get expert analysis and winning picks for NFL, NBA, MLB, NHL & Soccer. 
-                Join thousands of successful bettors using AI to beat the odds.
+                Get expert analysis delivered to your inbox every morning. No more guessing - 
+                we crunch the numbers for NFL, NBA, MLB, NHL & Soccer so you don't have to.
               </p>
             </div>
 
             {/* Live Stats Preview */}
             <div className={styles.liveStats}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>73%</span>
-                <span className={styles.statLabel}>Win Rate This Week</span>
+                <span className={styles.statValue}>Daily</span>
+                <span className={styles.statLabel}>Expert Analysis</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>12,847</span>
-                <span className={styles.statLabel}>Active Members</span>
+                <span className={styles.statValue}>5</span>
+                <span className={styles.statLabel}>Major Sports</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>$47K</span>
-                <span className={styles.statLabel}>Won Yesterday</span>
+                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statLabel}>Free Trial</span>
               </div>
             </div>
 
@@ -47,27 +101,27 @@ export function Hero() {
                 className={styles.primaryButton}
                 onClick={() => setIsWaitlistOpen(true)}
               >
-                <span>Start Free 2-Day Trial</span>
-                <span className={styles.buttonIcon}>🚀</span>
+                <span>Try Free for 2 Days</span>
+                <span className={styles.buttonIcon}>🎯</span>
               </button>
               <p className={styles.ctaNote}>
-                No credit card required • Cancel anytime
+                No credit card required • See what we're all about
               </p>
             </div>
 
             {/* Trust Indicators */}
             <div className={styles.trustIndicators}>
               <div className={styles.indicator}>
-                <span className={styles.icon}>⭐</span>
-                <span>4.9/5 rating</span>
+                <span className={styles.icon}>📊</span>
+                <span>We do the research</span>
               </div>
               <div className={styles.indicator}>
                 <span className={styles.icon}>🔒</span>
-                <span>Secure & private</span>
+                <span>Safe & secure</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>📱</span>
-                <span>Works everywhere</span>
+                <span className={styles.icon}>💡</span>
+                <span>Learn as you go</span>
               </div>
             </div>
           </div>
@@ -75,46 +129,23 @@ export function Hero() {
           {/* Hero Visual */}
           <div className={styles.visual}>
             <div className={styles.predictionsDemo}>
-              <div className={styles.demoCard}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.sport}>🏈 NFL</span>
-                  <span className={styles.confidence}>92% Confidence</span>
-                </div>
-                <div className={styles.matchup}>
-                  <span>Chiefs @ Bills</span>
-                </div>
-                <div className={styles.prediction}>
-                  <span className={styles.pick}>Chiefs -3.5</span>
-                  <span className={styles.result}>✅ WIN</span>
-                </div>
-              </div>
-              
-              <div className={styles.demoCard}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.sport}>🏀 NBA</span>
-                  <span className={styles.confidence}>87% Confidence</span>
-                </div>
-                <div className={styles.matchup}>
-                  <span>Lakers @ Warriors</span>
-                </div>
-                <div className={styles.prediction}>
-                  <span className={styles.pick}>Over 215.5</span>
-                  <span className={styles.result}>✅ WIN</span>
-                </div>
-              </div>
-              
-              <div className={styles.demoCard}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.sport}>⚾ MLB</span>
-                  <span className={styles.confidence}>84% Confidence</span>
-                </div>
-                <div className={styles.matchup}>
-                  <span>Yankees @ Red Sox</span>
-                </div>
-                <div className={styles.prediction}>
-                  <span className={styles.pick}>Yankees ML</span>
-                  <span className={styles.result}>✅ WIN</span>
-                </div>
+              <div className={styles.marqueeContainer}>
+                {/* Render 6 cards (2 sets) for seamless looping */}
+                {[...demoCards, ...demoCards].map((card, index) => (
+                  <div key={index} className={styles.demoCard}>
+                    <div className={styles.cardHeader}>
+                      <span className={styles.sport}>{card.sport}</span>
+                      <span className={styles.confidence}>{card.confidence}</span>
+                    </div>
+                    <div className={styles.matchup}>
+                      <span>{card.matchup}</span>
+                    </div>
+                    <div className={styles.prediction}>
+                      <span className={styles.pick}>{card.pick}</span>
+                      <span className={styles.result}>{card.result}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

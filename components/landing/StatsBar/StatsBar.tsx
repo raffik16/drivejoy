@@ -12,37 +12,37 @@ interface Stat {
 
 const liveStats: Stat[] = [
   {
-    label: 'Win Rate (30 Days)',
-    value: '73.4%',
+    label: 'Betting Success Rate',
+    value: '53%',
     icon: '📈',
-    change: '+5.2%'
+    change: 'Long-term average'
   },
   {
-    label: 'Active Members',
-    value: '12,847',
-    icon: '👥',
-    change: '+327 today'
+    label: 'Games Covered',
+    value: '10,000+',
+    icon: '⚽',
+    change: 'Since we started'
   },
   {
-    label: 'Profit Generated',
-    value: '$2.1M',
-    icon: '💰',
-    change: '+$47K yesterday'
+    label: 'Research Systems',
+    value: '5',
+    icon: '🔬',
+    change: 'Different approaches'
   },
   {
-    label: 'Predictions Made',
-    value: '45,692',
-    icon: '🎯',
-    change: '+1,234 today'
+    label: 'Factors We Check',
+    value: '50+',
+    icon: '📋',
+    change: 'Per game'
   }
 ];
 
 const recentActivity = [
-  '🏈 Chiefs -3.5 ✅ WIN - 2 min ago',
-  '🏀 Lakers Over 215.5 ✅ WIN - 5 min ago',
-  '⚾ Yankees ML ✅ WIN - 8 min ago',
-  '🏒 Bruins -1.5 ✅ WIN - 12 min ago',
-  '⚽ Man City -0.5 ✅ WIN - 15 min ago',
+  '🏈 Ravens +3.5 looks good - injury report favorable',
+  '🏀 Lakers/Warriors Under 228.5 - pace data suggests low scoring',
+  '⚾ Yankees/Red Sox - no clear advantage, skip this one',
+  '🏒 Devils ML - home ice + goalie matchup favors them',
+  '⚽ Chelsea vs Arsenal - draw has value at those odds',
 ];
 
 export function StatsBar() {
