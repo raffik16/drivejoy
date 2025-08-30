@@ -33,15 +33,13 @@ export function PricingPreview() {
             </div>
             <div className={styles.cardContent}>
               <p className={styles.description}>
-                Comprehensive daily analysis covering all major sports
+                Everything in Daily Email + a custom agent just for you
               </p>
               <div className={styles.features}>
-                <div className={styles.feature}>✓ All sports included</div>
-                <div className={styles.feature}>✓ More games analyzed</div>
-                <div className={styles.feature}>✓ Detailed breakdowns</div>
-                <div className={styles.feature}>✓ Best value bets highlighted</div>
-                <div className={styles.feature}>✓ Priority email delivery</div>
-                <div className={styles.feature}>✓ Everything in Daily Plan</div>
+                <div className={styles.feature}>✓ Personal AI agent</div>
+                <div className={styles.feature}>✓ Your sources, our AI</div>
+                <div className={styles.feature}>✓ Priority support</div>
+                <div className={styles.feature}>✓ Everything in Daily Email</div>
               </div>
             </div>
           </div>
