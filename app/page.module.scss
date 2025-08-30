@@ -1,4 +1,4 @@
-@import '../styles/mixins';
+@use '../styles/mixins' as mixins;
 
 .main {
   min-height: 100vh;
@@ -10,5 +10,5 @@
 
 // Add subtle animations for page transitions
 .main {
-  @include fade-in(0.5s);
+  @include mixins.fade-in(0.5s);
 }

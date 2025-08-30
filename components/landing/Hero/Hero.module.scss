@@ -1,4 +1,4 @@
-@import '../../../styles/mixins';
+@use "../../../styles/mixins" as mixins;
 
 .hero {
   min-height: 100vh;
@@ -24,7 +24,7 @@
 }
 
 .container {
-  @include container;
+  @include mixins.container;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-12);
@@ -32,7 +32,7 @@
   padding-top: var(--space-20);
   padding-bottom: var(--space-20);
   
-  @include lg {
+  @include mixins.lg {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-16);
   }
@@ -43,7 +43,7 @@
   z-index: 3;
   position: relative;
   
-  @include lg {
+  @include mixins.lg {
     padding-right: var(--space-8);
   }
 }
@@ -52,31 +52,31 @@
   margin-bottom: var(--space-10);
   text-align: center;
   
-  @include lg {
+  @include mixins.lg {
     text-align: left;
   }
 }
 
 .title {
-  @include heading-1;
+  @include mixins.heading-1;
   margin-bottom: var(--space-6);
   font-weight: var(--font-weight-extrabold);
   line-height: 1.1;
   
-  @include fade-in(0.8s);
+  @include mixins.fade-in(0.8s);
   
   // Responsive font sizes
   font-size: var(--font-size-4xl);
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-5xl);
   }
   
-  @include lg {
+  @include mixins.lg {
     font-size: var(--font-size-6xl);
   }
   
-  @include xl {
+  @include mixins.xl {
     font-size: var(--font-size-7xl);
   }
 }
@@ -100,16 +100,16 @@
 }
 
 .subtitle {
-  @include body-large;
+  @include mixins.body-large;
   opacity: 0.9;
   line-height: var(--line-height-relaxed);
   max-width: 600px;
   
-  @include slide-up(1s);
+  @include mixins.slide-up(1s);
   animation-delay: 0.3s;
   animation-fill-mode: both;
   
-  @include lg {
+  @include mixins.lg {
     font-size: var(--font-size-xl);
   }
 }
@@ -120,17 +120,17 @@
   gap: var(--space-4);
   margin-bottom: var(--space-10);
   
-  @include md {
+  @include mixins.md {
     gap: var(--space-8);
   }
   
-  @include bounce-in(1.2s);
+  @include mixins.bounce-in(1.2s);
 }
 
 .desktopStats {
   display: none;
   
-  @include lg {
+  @include mixins.lg {
     display: grid;
   }
 }
@@ -138,7 +138,7 @@
 .mobileStats {
   display: grid;
   
-  @include lg {
+  @include mixins.lg {
     display: none;
   }
   animation-delay: 0.6s;
@@ -165,7 +165,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-warning);
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-3xl);
   }
 }
@@ -176,7 +176,7 @@
   opacity: 0.8;
   margin-top: var(--space-1);
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-base);
   }
 }
@@ -185,17 +185,17 @@
   text-align: center;
   margin-bottom: var(--space-8);
   
-  @include lg {
+  @include mixins.lg {
     text-align: left;
   }
   
-  @include slide-up(1s);
+  @include mixins.slide-up(1s);
   animation-delay: 0.9s;
   animation-fill-mode: both;
 }
 
 .primaryButton {
-  @include button-primary;
+  @include mixins.button-primary;
   font-size: var(--font-size-lg);
   padding: var(--space-4) var(--space-8);
   background: var(--color-warning);
@@ -229,7 +229,7 @@
     left: 100%;
   }
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-xl);
     padding: var(--space-5) var(--space-10);
   }
@@ -251,7 +251,7 @@
   font-size: var(--font-size-sm);
   opacity: 0.7;
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-base);
   }
 }
@@ -262,11 +262,11 @@
   gap: var(--space-6);
   justify-content: center;
   
-  @include lg {
+  @include mixins.lg {
     justify-content: flex-start;
   }
   
-  @include fade-in(1s);
+  @include mixins.fade-in(1s);
   animation-delay: 1.2s;
   animation-fill-mode: both;
 }
@@ -282,7 +282,7 @@
     font-size: var(--font-size-base);
   }
   
-  @include md {
+  @include mixins.md {
     font-size: var(--font-size-base);
   }
 }
@@ -293,7 +293,7 @@
   border-radius: var(--radius-xl);
   margin: var(--space-8) 0;
   
-  @include lg {
+  @include mixins.lg {
     display: none;
   }
   
@@ -313,7 +313,7 @@
 .visual {
   display: none;
   
-  @include lg {
+  @include mixins.lg {
     display: block;
   }
 }
@@ -322,7 +322,7 @@
   position: relative;
   height: 100vh;
   
-  @include slide-up(1s);
+  @include mixins.slide-up(1s);
   animation-delay: 1.5s;
   animation-fill-mode: both;
 }

@@ -1,4 +1,4 @@
-@import '../../../styles/mixins';
+@use "../../../styles/mixins" as mixins;
 
 .pricingPreview {
   padding: var(--space-16) 0;
@@ -6,12 +6,12 @@
 }
 
 .container {
-  @include container;
+  @include mixins.container;
   text-align: center;
 }
 
 .title {
-  @include heading-2;
+  @include mixins.heading-2;
   margin-bottom: var(--space-8);
   color: var(--color-gray-900);
 }
@@ -23,14 +23,14 @@
   max-width: 900px;
   margin: 0 auto var(--space-12);
   
-  @include md {
+  @include mixins.md {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
 }
 
 .card {
-  @include card;
+  @include mixins.card;
   padding: 0;
   border: 2px solid var(--color-gray-200);
   transition: var(--transition-base);
@@ -72,7 +72,7 @@
   }
   
   h3 {
-    @include heading-3;
+    @include mixins.heading-3;
     margin-bottom: var(--space-3);
     color: var(--color-gray-900);
   }
@@ -130,7 +130,7 @@
   margin: 0 auto;
   
   h4 {
-    @include heading-3;
+    @include mixins.heading-3;
     margin-bottom: var(--space-4);
   }
   

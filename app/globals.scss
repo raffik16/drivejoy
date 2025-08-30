@@ -1,6 +1,6 @@
 // Import our custom variables and mixins
-@import '../styles/variables';
-@import '../styles/mixins';
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mixins;
 
 // Reset and base styles
 *,
@@ -104,60 +104,60 @@ h6 {
 }
 
 h1 {
-  @include heading-1;
+  @include mixins.heading-1;
 }
 
 h2 {
-  @include heading-2;
+  @include mixins.heading-2;
 }
 
 h3 {
-  @include heading-3;
+  @include mixins.heading-3;
 }
 
 p {
   margin: 0;
-  @include body-base;
+  @include mixins.body-base;
 }
 
 // Utility classes
 .container {
-  @include container;
+  @include mixins.container;
 }
 
 .visually-hidden {
-  @include visually-hidden;
+  @include mixins.visually-hidden;
 }
 
 .truncate {
-  @include truncate;
+  @include mixins.truncate;
 }
 
 // Button classes
 .btn {
-  @include button-base;
+  @include mixins.button-base;
 }
 
 .btn-primary {
-  @include button-primary;
+  @include mixins.button-primary;
 }
 
 .btn-secondary {
-  @include button-secondary;
+  @include mixins.button-secondary;
 }
 
 .btn-ghost {
-  @include button-ghost;
+  @include mixins.button-ghost;
 }
 
 // Input classes
 .input {
-  @include input-base;
+  @include mixins.input-base;
 }
 
 // Card classes
 .card {
-  @include card;
+  @include mixins.card;
 }
 
 // Spacing utilities
@@ -184,13 +184,13 @@ p {
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-@include md {
+@include mixins.md {
   .md-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .md-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .md-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-@include lg {
+@include mixins.lg {
   .lg-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .lg-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
@@ -238,13 +238,13 @@ p {
 
 // Animation utilities
 .transition { transition: var(--transition-base); }
-.fade-in { @include fade-in; }
-.slide-up { @include slide-up; }
-.pulse { @include pulse; }
+.fade-in { @include mixins.fade-in; }
+.slide-up { @include mixins.slide-up; }
+.pulse { @include mixins.pulse; }
 
 // Loading and state utilities
 .loading {
-  @include pulse;
+  @include mixins.pulse;
   background: var(--color-gray-200);
   border-radius: var(--radius-base);
 }
@@ -258,18 +258,18 @@ p {
 // Responsive utilities
 .hidden { display: none; }
 
-@include sm {
+@include mixins.sm {
   .sm-block { display: block; }
   .sm-hidden { display: none; }
 }
 
-@include md {
+@include mixins.md {
   .md-block { display: block; }
   .md-hidden { display: none; }
   .md-flex { display: flex; }
 }
 
-@include lg {
+@include mixins.lg {
   .lg-block { display: block; }
   .lg-hidden { display: none; }
 }

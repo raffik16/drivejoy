@@ -1,4 +1,4 @@
-@import '../../../styles/mixins';
+@use "../../../styles/mixins" as mixins;
 
 .overlay {
   position: fixed;
@@ -14,7 +14,7 @@
   padding: var(--space-4);
   z-index: var(--z-modal);
   
-  @include fade-in(0.2s);
+  @include mixins.fade-in(0.2s);
 }
 
 .modal {
@@ -25,7 +25,7 @@
   max-height: 90vh;
   overflow-y: auto;
   
-  @include slide-up(0.3s);
+  @include mixins.slide-up(0.3s);
   
   &.sm {
     max-width: 400px;
@@ -45,19 +45,19 @@
 }
 
 .header {
-  @include flex-between;
+  @include mixins.flex-between;
   padding: var(--space-6) var(--space-6) var(--space-4);
   border-bottom: 1px solid var(--color-gray-200);
 }
 
 .title {
-  @include heading-3;
+  @include mixins.heading-3;
   color: var(--color-gray-900);
   margin: 0;
 }
 
 .closeButton {
-  @include button-ghost;
+  @include mixins.button-ghost;
   width: 32px;
   height: 32px;
   padding: 0;
