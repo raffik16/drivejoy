@@ -79,8 +79,47 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Live Stats Preview */}
-            <div className={styles.liveStats}>
+            {/* Live Stats Preview - Desktop */}
+            <div className={`${styles.liveStats} ${styles.desktopStats}`}>
+              <div className={styles.stat}>
+                <span className={styles.statValue}>Daily</span>
+                <span className={styles.statLabel}>Expert Analysis</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statValue}>5</span>
+                <span className={styles.statLabel}>Major Sports</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statLabel}>Free Trial</span>
+              </div>
+            </div>
+
+            {/* Mobile Demo Cards */}
+            <div className={styles.mobileDemoPreview}>
+              <div className={styles.predictionsDemo}>
+                <div className={styles.marqueeContainer}>
+                  {[...demoCards, ...demoCards].map((card, index) => (
+                    <div key={index} className={styles.demoCard}>
+                      <div className={styles.cardHeader}>
+                        <span className={styles.sport}>{card.sport}</span>
+                        <span className={styles.confidence}>{card.confidence}</span>
+                      </div>
+                      <div className={styles.matchup}>
+                        <span>{card.matchup}</span>
+                      </div>
+                      <div className={styles.prediction}>
+                        <span className={styles.pick}>{card.pick}</span>
+                        <span className={styles.result}>{card.result}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Live Stats Preview - Mobile */}
+            <div className={`${styles.liveStats} ${styles.mobileStats}`}>
               <div className={styles.stat}>
                 <span className={styles.statValue}>Daily</span>
                 <span className={styles.statLabel}>Expert Analysis</span>
