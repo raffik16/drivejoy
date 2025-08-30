@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.pricingPreview {
+  padding: var(--space-16) 0;
+  background: var(--color-white);
+}
+
+.container {
+  @include container;
+  text-align: center;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: var(--space-8);
+  color: var(--color-gray-900);
+}
+
+.pricingCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  max-width: 600px;
+  margin: 0 auto;
+  
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  @include card;
+  padding: var(--space-8);
+  
+  h3 {
+    margin-bottom: var(--space-4);
+    color: var(--color-gray-900);
+  }
+}
+
+.price {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}

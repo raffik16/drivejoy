@@ -1,0 +1,15 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.main {
+  min-height: 100vh;
+  background: var(--color-white);
+  
+  // Smooth scrolling for anchor links
+  scroll-behavior: smooth;
+}
+
+// Add subtle animations for page transitions
+.main {
+  @include fade-in(0.5s);
+}

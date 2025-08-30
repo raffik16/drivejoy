@@ -1,0 +1,231 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.statsBar {
+  background: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: var(--space-12) 0;
+}
+
+.container {
+  @include container;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: var(--space-10);
+  }
+}
+
+.statCard {
+  @include card;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  transition: var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+  }
+  
+  // Stagger animations
+  &:nth-child(1) {
+    @include slide-up(0.6s);
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+  }
+  
+  &:nth-child(2) {
+    @include slide-up(0.6s);
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+  }
+  
+  &:nth-child(3) {
+    @include slide-up(0.6s);
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+  }
+  
+  &:nth-child(4) {
+    @include slide-up(0.6s);
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+  }
+}
+
+.statIcon {
+  font-size: var(--font-size-2xl);
+  flex-shrink: 0;
+  
+  @include lg {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.statContent {
+  min-width: 0; // Allows text truncation
+}
+
+.statValue {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  line-height: var(--line-height-tight);
+  
+  @include lg {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+.statLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-top: var(--space-1);
+  line-height: var(--line-height-snug);
+  
+  @include lg {
+    font-size: var(--font-size-base);
+  }
+}
+
+.statChange {
+  font-size: var(--font-size-xs);
+  color: var(--color-success);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--space-1);
+  
+  @include lg {
+    font-size: var(--font-size-sm);
+  }
+}
+
+// Live Activity Feed
+.activityFeed {
+  @include card;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: var(--space-6);
+  text-align: center;
+  
+  @include fade-in(0.8s);
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.activityHeader {
+  margin-bottom: var(--space-4);
+}
+
+.liveIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-warning);
+  border-radius: var(--radius-full);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(249, 171, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(249, 171, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(249, 171, 0, 0);
+  }
+}
+
+.activityContent {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  min-height: 1.5em; // Prevent layout shift
+  transition: var(--transition-base);
+  
+  @include lg {
+    font-size: var(--font-size-lg);
+  }
+  
+  // Typing animation effect
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Mobile optimizations
+@media (max-width: 640px) {
+  .statsBar {
+    padding: var(--space-8) 0;
+  }
+  
+  .statCard {
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+  
+  .statIcon {
+    font-size: var(--font-size-xl);
+  }
+  
+  .statValue {
+    font-size: var(--font-size-lg);
+  }
+  
+  .statLabel {
+    font-size: var(--font-size-xs);
+  }
+  
+  .statChange {
+    font-size: 10px;
+  }
+  
+  .activityFeed {
+    padding: var(--space-4);
+  }
+  
+  .activityContent {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.socialProof {
+  padding: var(--space-16) 0;
+  background: var(--color-white);
+}
+
+.container {
+  @include container;
+  text-align: center;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: var(--space-8);
+  color: var(--color-gray-900);
+}
+
+.testimonials {
+  color: var(--color-gray-600);
+}

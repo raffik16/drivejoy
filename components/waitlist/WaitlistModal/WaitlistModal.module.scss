@@ -1,0 +1,243 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+// Form Container
+.formContainer {
+  .header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+
+  .title {
+    @include heading-3;
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-2);
+  }
+
+  .subtitle {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-base);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.input, .select {
+  @include input-base;
+  
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+.hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  margin-top: var(--space-1);
+}
+
+.submitButton {
+  @include button-primary;
+  font-size: var(--font-size-base);
+  padding: var(--space-4) var(--space-6);
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: var(--radius-full);
+    animation: spin 1s linear infinite;
+    margin-right: var(--space-2);
+    display: inline-block;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.terms {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+}
+
+// Success Container
+.successContainer {
+  text-align: center;
+  
+  .successIcon {
+    font-size: var(--font-size-6xl);
+    margin-bottom: var(--space-4);
+  }
+  
+  .successTitle {
+    @include heading-2;
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-6);
+  }
+}
+
+.positionCard {
+  @include card;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  
+  .positionNumber {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-black);
+    margin-bottom: var(--space-2);
+  }
+  
+  .positionText {
+    font-size: var(--font-size-base);
+    opacity: 0.9;
+  }
+}
+
+.referralSection {
+  margin-bottom: var(--space-8);
+  
+  .referralTitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-2);
+  }
+  
+  .referralText {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-4);
+  }
+}
+
+.referralCode {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  
+  @include sm {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+.codeBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  
+  @include sm {
+    width: 100%;
+  }
+  
+  .codeLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+  }
+  
+  .code {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    background: var(--color-white);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--color-gray-300);
+  }
+}
+
+.copyButton {
+  @include button-secondary;
+  flex-shrink: 0;
+  
+  @include sm {
+    width: 100%;
+  }
+}
+
+.socialShare {
+  margin-bottom: var(--space-8);
+  
+  .shareText {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-3);
+  }
+}
+
+.shareButtons {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.shareButton {
+  @include button-ghost;
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-gray-300);
+  
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+.successActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.primaryButton {
+  @include button-primary;
+}
+
+.secondaryButton {
+  @include button-secondary;
+}
