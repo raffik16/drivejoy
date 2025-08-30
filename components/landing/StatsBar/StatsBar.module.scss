@@ -168,17 +168,73 @@
 }
 
 .activityContent {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-  min-height: 1.5em; // Prevent layout shift
+  min-height: 80px; // Prevent layout shift
   transition: var(--transition-base);
+  text-align: left;
+  
+  // Typing animation effect
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+.activityItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.activityHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+  
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+}
+
+.activitySport {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.activityGame {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  opacity: 0.9;
+  
+  @media (max-width: 640px) {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.activityTime {
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+  font-weight: var(--font-weight-medium);
+}
+
+.activityAnalysis {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-warning);
+  margin-bottom: var(--space-1);
   
   @include lg {
     font-size: var(--font-size-lg);
   }
+}
+
+.activityReason {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  line-height: var(--line-height-relaxed);
   
-  // Typing animation effect
-  animation: fadeInSlide 0.5s ease-out;
+  @include lg {
+    font-size: var(--font-size-base);
+  }
 }
 
 @keyframes fadeInSlide {
@@ -224,7 +280,19 @@
   }
   
   .activityContent {
+    min-height: 90px;
+  }
+  
+  .activitySport {
+    font-size: var(--font-size-base);
+  }
+  
+  .activityAnalysis {
     font-size: var(--font-size-sm);
+  }
+  
+  .activityReason {
+    font-size: var(--font-size-xs);
     line-height: var(--line-height-relaxed);
   }
 }

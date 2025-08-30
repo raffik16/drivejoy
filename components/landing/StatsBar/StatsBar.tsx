@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import styles from './StatsBar.module.scss';
 
 interface Stat {
@@ -37,24 +36,8 @@ const liveStats: Stat[] = [
   }
 ];
 
-const recentActivity = [
-  '🏈 Ravens +3.5 looks good - injury report favorable',
-  '🏀 Lakers/Warriors Under 228.5 - pace data suggests low scoring',
-  '⚾ Yankees/Red Sox - no clear advantage, skip this one',
-  '🏒 Devils ML - home ice + goalie matchup favors them',
-  '⚽ Chelsea vs Arsenal - draw has value at those odds',
-];
 
 export function StatsBar() {
-  const [currentActivityIndex, setCurrentActivityIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentActivityIndex((prev) => (prev + 1) % recentActivity.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className={styles.statsBar}>
@@ -75,18 +58,6 @@ export function StatsBar() {
           ))}
         </div>
 
-        {/* Live Activity Feed */}
-        <div className={styles.activityFeed}>
-          <div className={styles.activityHeader}>
-            <span className={styles.liveIndicator}>
-              <span className={styles.liveDot}></span>
-              Live Activity
-            </span>
-          </div>
-          <div className={styles.activityContent}>
-            {recentActivity[currentActivityIndex]}
-          </div>
-        </div>
       </div>
     </section>
   );

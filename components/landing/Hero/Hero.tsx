@@ -144,7 +144,7 @@ export function Hero() {
                 <span className={styles.buttonIcon}>🎯</span>
               </button>
               <p className={styles.ctaNote}>
-                No credit card required • See what we're all about
+                See what we're all about
               </p>
             </div>
 
