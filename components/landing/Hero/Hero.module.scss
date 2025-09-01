@@ -24,13 +24,14 @@
 }
 
 .container {
-  @include mixins.container;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-12);
   align-items: center;
   padding-top: var(--space-20);
   padding-bottom: var(--space-20);
+  
+  @include mixins.container;
   
   @include mixins.lg {
     grid-template-columns: 1fr 1fr;
@@ -58,15 +59,13 @@
 }
 
 .title {
-  @include mixins.heading-1;
   margin-bottom: var(--space-6);
   font-weight: var(--font-weight-extrabold);
   line-height: 1.1;
-  
-  @include mixins.fade-in(0.8s);
-  
-  // Responsive font sizes
   font-size: var(--font-size-4xl);
+  
+  @include mixins.heading-1;
+  @include mixins.fade-in(0.8s);
   
   @include mixins.md {
     font-size: var(--font-size-5xl);
@@ -100,14 +99,14 @@
 }
 
 .subtitle {
-  @include mixins.body-large;
   opacity: 0.9;
   line-height: var(--line-height-relaxed);
   max-width: 600px;
-  
-  @include mixins.slide-up(1s);
   animation-delay: 0.3s;
   animation-fill-mode: both;
+  
+  @include mixins.body-large;
+  @include mixins.slide-up(1s);
   
   @include mixins.lg {
     font-size: var(--font-size-xl);
@@ -120,11 +119,11 @@
   gap: var(--space-4);
   margin-bottom: var(--space-10);
   
+  @include mixins.bounce-in(1.2s);
+  
   @include mixins.md {
     gap: var(--space-8);
   }
-  
-  @include mixins.bounce-in(1.2s);
 }
 
 .desktopStats {
@@ -195,7 +194,6 @@
 }
 
 .primaryButton {
-  @include mixins.button-primary;
   font-size: var(--font-size-lg);
   padding: var(--space-4) var(--space-8);
   background: var(--color-warning);
@@ -203,6 +201,8 @@
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
+  
+  @include mixins.button-primary;
   
   &:hover {
     background: var(--color-warning);

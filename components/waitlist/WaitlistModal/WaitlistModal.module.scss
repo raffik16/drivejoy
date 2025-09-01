@@ -8,9 +8,10 @@
   }
 
   .title {
-    @include mixins.heading-3;
     color: var(--color-gray-900);
     margin-bottom: var(--space-2);
+    
+    @include mixins.heading-3;
   }
 
   .subtitle {
@@ -52,9 +53,10 @@
 }
 
 .submitButton {
-  @include mixins.button-primary;
   font-size: var(--font-size-base);
   padding: var(--space-4) var(--space-6);
+  
+  @include mixins.button-primary;
   
   &:disabled {
     opacity: 0.7;
@@ -96,18 +98,20 @@
   }
   
   .successTitle {
-    @include mixins.heading-2;
     color: var(--color-gray-900);
     margin-bottom: var(--space-6);
+    
+    @include mixins.heading-2;
   }
 }
 
 .positionCard {
-  @include mixins.card;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: var(--color-white);
   padding: var(--space-6);
   margin-bottom: var(--space-8);
+  
+  @include mixins.card;
   
   .positionNumber {
     font-size: var(--font-size-4xl);
@@ -183,8 +187,9 @@
 }
 
 .copyButton {
-  @include mixins.button-secondary;
   flex-shrink: 0;
+  
+  @include mixins.button-secondary;
   
   @include mixins.sm {
     width: 100%;
@@ -212,10 +217,11 @@
 }
 
 .shareButton {
-  @include mixins.button-ghost;
   font-size: var(--font-size-sm);
   padding: var(--space-2) var(--space-4);
   border: 1px solid var(--color-gray-300);
+  
+  @include mixins.button-ghost;
   
   &:hover {
     border-color: var(--color-primary);

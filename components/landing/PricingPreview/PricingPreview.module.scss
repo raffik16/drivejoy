@@ -6,14 +6,16 @@
 }
 
 .container {
-  @include mixins.container;
   text-align: center;
+  
+  @include mixins.container;
 }
 
 .title {
-  @include mixins.heading-2;
   margin-bottom: var(--space-8);
   color: var(--color-gray-900);
+  
+  @include mixins.heading-2;
 }
 
 .pricingCards {
@@ -30,11 +32,12 @@
 }
 
 .card {
-  @include mixins.card;
   padding: 0;
   border: 2px solid var(--color-gray-200);
   transition: var(--transition-base);
   overflow: hidden;
+  
+  @include mixins.card;
   
   &:hover {
     transform: translateY(-4px);
@@ -72,9 +75,10 @@
   }
   
   h3 {
-    @include mixins.heading-3;
     margin-bottom: var(--space-3);
     color: var(--color-gray-900);
+    
+    @include mixins.heading-3;
   }
 }
 
@@ -130,8 +134,9 @@
   margin: 0 auto;
   
   h4 {
-    @include mixins.heading-3;
     margin-bottom: var(--space-4);
+    
+    @include mixins.heading-3;
   }
   
   p {
