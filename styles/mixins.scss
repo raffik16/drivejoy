@@ -159,6 +159,16 @@
   }
 }
 
+@mixin heading-4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-2xl);
+  }
+}
+
 @mixin body-large {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
@@ -171,6 +181,16 @@
 
 @mixin body-small {
   font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+@mixin body-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+@mixin body-xs {
+  font-size: var(--font-size-xs);
   line-height: var(--line-height-normal);
 }
 

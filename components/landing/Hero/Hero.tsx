@@ -69,29 +69,28 @@ export function Hero() {
             {/* Main Headlines */}
             <div className={styles.headlines}>
               <h1 className={styles.title}>
-                Make Better Bets with{' '}
-                <span className={styles.highlight}>Smart Data</span>{' '}
-                Analysis
+                Professional-Grade{' '}
+                <span className={styles.highlight}>Betting Intelligence</span>
               </h1>
               <p className={styles.subtitle}>
-                Get expert analysis delivered to your inbox every morning. No more guessing - 
-                we crunch the numbers for NFL, NBA, MLB, NHL & Soccer so you don't have to.
+                Advanced statistical analysis and edge detection delivered daily at 7 AM. 
+                Sophisticated modeling, CLV analysis, and professional-level insights for serious bettors.
               </p>
             </div>
 
             {/* Live Stats Preview - Desktop */}
             <div className={`${styles.liveStats} ${styles.desktopStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>1.85</span>
+                <span className={styles.statLabel}>Sharpe Ratio</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>+12¢</span>
+                <span className={styles.statLabel}>Average CLV</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>2-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>19.6%</span>
+                <span className={styles.statLabel}>Max detected edge</span>
               </div>
             </div>
 
@@ -121,16 +120,16 @@ export function Hero() {
             {/* Live Stats Preview - Mobile */}
             <div className={`${styles.liveStats} ${styles.mobileStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>1.85</span>
+                <span className={styles.statLabel}>Sharpe Ratio</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>+12¢</span>
+                <span className={styles.statLabel}>Average CLV</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>2-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>19.6%</span>
+                <span className={styles.statLabel}>Max detected edge</span>
               </div>
             </div>
 
@@ -140,11 +139,11 @@ export function Hero() {
                 className={styles.primaryButton}
                 onClick={() => setIsWaitlistOpen(true)}
               >
-                <span>Try Free for 2 Days</span>
-                <span className={styles.buttonIcon}>🎯</span>
+                <span>Start Your 48-Hour Free Trial</span>
+                <span className={styles.buttonIcon}>📧</span>
               </button>
               <p className={styles.ctaNote}>
-                See what we're all about
+                Get real daily emails • No credit card required
               </p>
             </div>
 
@@ -152,15 +151,15 @@ export function Hero() {
             <div className={styles.trustIndicators}>
               <div className={styles.indicator}>
                 <span className={styles.icon}>📊</span>
-                <span>We do the research</span>
+                <span>Statistical modeling & VaR analysis</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>🔒</span>
-                <span>Safe & secure</span>
+                <span className={styles.icon}>⚡</span>
+                <span>Edge detection & CLV optimization</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>💡</span>
-                <span>Learn as you go</span>
+                <span className={styles.icon}>🎯</span>
+                <span>Professional-grade research</span>
               </div>
             </div>
           </div>

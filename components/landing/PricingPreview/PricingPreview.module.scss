@@ -19,16 +19,9 @@
 }
 
 .pricingCards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  max-width: 900px;
+  display: flex;
+  justify-content: center;
   margin: 0 auto var(--space-12);
-  
-  @include mixins.md {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
 }
 
 .card {
@@ -36,6 +29,8 @@
   border: 2px solid var(--color-gray-200);
   transition: var(--transition-base);
   overflow: hidden;
+  max-width: 500px;
+  width: 100%;
   
   @include mixins.card;
   
@@ -49,8 +44,8 @@
     border-color: var(--color-primary);
     position: relative;
     
-    &::before {
-      content: 'Most Popular';
+    &.single::before {
+      content: 'Expert Newsletter';
       position: absolute;
       top: 0;
       left: 0;
@@ -75,11 +70,18 @@
   }
   
   h3 {
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
     color: var(--color-gray-900);
     
     @include mixins.heading-3;
   }
+}
+
+.tagline {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-3);
+  font-style: italic;
 }
 
 .price {

@@ -15,6 +15,8 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
   const [source, setSource] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [step, setStep] = useState<'form' | 'success'>('form');
+  const [ageVerified, setAgeVerified] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [waitlistData, setWaitlistData] = useState<{
     position: number;
     referralCode: string;
@@ -62,6 +64,8 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     setEmail('');
     setReferralCode('');
     setSource('');
+    setAgeVerified(false);
+    setTermsAccepted(false);
     setWaitlistData(null);
   };
 
@@ -141,10 +145,67 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               </p>
             </div>
 
+            <div className={styles.checkboxGroup}>
+              <div className={styles.checkboxItem}>
+                <input
+                  type="checkbox"
+                  id="ageVerification"
+                  checked={ageVerified}
+                  onChange={(e) => setAgeVerified(e.target.checked)}
+                  className={styles.checkbox}
+                  disabled={isLoading}
+                  required
+                />
+                <label htmlFor="ageVerification" className={styles.checkboxLabel}>
+                  I confirm that I am 21 years of age or older
+                </label>
+              </div>
+              
+              <div className={styles.checkboxItem}>
+                <input
+                  type="checkbox"
+                  id="termsAcceptance"
+                  checked={termsAccepted}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
+                  className={styles.checkbox}
+                  disabled={isLoading}
+                  required
+                />
+                <label htmlFor="termsAcceptance" className={styles.checkboxLabel}>
+                  I agree to the{' '}
+                  <a 
+                    href="/terms" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                  >
+                    Terms of Service
+                  </a>{' '}
+                  and{' '}
+                  <a 
+                    href="/privacy" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                  >
+                    Privacy Policy
+                  </a>
+                </label>
+              </div>
+            </div>
+
+            <div className={styles.riskWarning}>
+              <p>
+                <strong>Important:</strong> Sports betting involves risk of loss. 
+                Never bet more than you can afford to lose. If you have a gambling problem, 
+                call 1-800-GAMBLER.
+              </p>
+            </div>
+
             <button
               type="submit"
               className={styles.submitButton}
-              disabled={isLoading || !email}
+              disabled={isLoading || !email || !ageVerified || !termsAccepted}
             >
               {isLoading ? (
                 <>

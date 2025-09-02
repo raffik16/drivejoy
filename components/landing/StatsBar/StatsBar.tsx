@@ -11,28 +11,28 @@ interface Stat {
 
 const liveStats: Stat[] = [
   {
-    label: 'Betting Success Rate',
+    label: 'Win Rate',
     value: '53%',
     icon: '📈',
-    change: 'Long-term average'
+    change: 'Beating the 52.4% break-even'
   },
   {
-    label: 'Games Covered',
-    value: '10,000+',
+    label: 'Daily Coverage',
+    value: '15-20',
     icon: '⚽',
-    change: 'Since we started'
+    change: 'Games across all major sports'
   },
   {
-    label: 'Research Systems',
-    value: '5',
+    label: 'Analysis Time',
+    value: '4+ Hours',
     icon: '🔬',
-    change: 'Different approaches'
+    change: 'Research done for you daily'
   },
   {
-    label: 'Factors We Check',
-    value: '50+',
+    label: 'Member Success',
+    value: '67%',
     icon: '📋',
-    change: 'Per game'
+    change: 'Show profit after 30 days'
   }
 ];
 

@@ -4,42 +4,25 @@ export function PricingPreview() {
   return (
     <section className={styles.pricingPreview}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Pick Your Plan</h2>
+        <h2 className={styles.title}>Choose Your Advantage</h2>
         
         <div className={styles.pricingCards}>
-          <div className={styles.card}>
+          <div className={`${styles.card} ${styles.featured} ${styles.single}`}>
             <div className={styles.cardHeader}>
-              <h3>Daily Email</h3>
-              <p className={styles.price}>$39.99<span className={styles.period}>/month</span></p>
+              <h3>Expert Insider</h3>
+              <p className={styles.tagline}>Professional betting insights delivered daily</p>
+              <p className={styles.price}>$59.99<span className={styles.period}>/month</span></p>
             </div>
             <div className={styles.cardContent}>
               <p className={styles.description}>
-                Expert analysis delivered to your inbox every morning
+                Wake up to winning insights. Expert analysis delivered to your inbox every morning 
+                with clear explanations you can actually understand.
               </p>
               <div className={styles.features}>
-                <div className={styles.feature}>✓ Daily morning emails</div>
-                <div className={styles.feature}>✓ All major sports covered</div>
-                <div className={styles.feature}>✓ Game breakdowns made simple</div>
-                <div className={styles.feature}>✓ Best bets identified</div>
-                <div className={styles.feature}>✓ Smart betting amounts</div>
-              </div>
-            </div>
-          </div>
-
-          <div className={`${styles.card} ${styles.featured}`}>
-            <div className={styles.cardHeader}>
-              <h3>Premium Plan</h3>
-              <p className={styles.price}>$89.99<span className={styles.period}>/month</span></p>
-            </div>
-            <div className={styles.cardContent}>
-              <p className={styles.description}>
-                Everything in Daily Email + a custom agent just for you
-              </p>
-              <div className={styles.features}>
-                <div className={styles.feature}>✓ Personal AI agent</div>
-                <div className={styles.feature}>✓ Your sources, our AI</div>
-                <div className={styles.feature}>✓ Priority support</div>
-                <div className={styles.feature}>✓ Everything in Daily Email</div>
+                <div className={styles.feature}>✓ Daily Morning Email (7 AM delivery)</div>
+                <div className={styles.feature}>✓ Expert Pick Analysis (3-5 best bets daily)</div>
+                <div className={styles.feature}>✓ Clear Explanations (Why each pick makes sense)</div>
+                <div className={styles.feature}>✓ All Major Sports (NFL, NBA, MLB, NHL, Soccer)</div>
               </div>
             </div>
           </div>
@@ -47,10 +30,9 @@ export function PricingPreview() {
 
         <div className={styles.guarantee}>
           <div className={styles.guaranteeContent}>
-            <h4>Try Free for 2 Days</h4>
+            <h4>Try Risk-Free for 48 Hours</h4>
             <p>
-              See what we're all about with no commitment. We give you research and advice, 
-              but you make your own betting decisions. Results depend on your choices.
+              Full access. Real picks. See actual results before you pay.
             </p>
           </div>
         </div>
