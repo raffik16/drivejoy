@@ -181,21 +181,6 @@ export default function PrivacyPage() {
               Subject: Privacy Inquiry
             </p>
           </section>
-
-          <div className={styles.quickActions}>
-            <h3>Quick Actions</h3>
-            <div className={styles.actionButtons}>
-              <button className={styles.actionButton}>
-                Request My Data
-              </button>
-              <button className={styles.actionButton}>
-                Delete My Account
-              </button>
-              <button className={styles.actionButton}>
-                Unsubscribe from Emails
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </main>
