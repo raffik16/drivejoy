@@ -19,7 +19,7 @@ export function PricingPreview() {
                 with clear explanations you can actually understand.
               </p>
               <div className={styles.features}>
-                <div className={styles.feature}>✓ Daily Morning Email (7 AM delivery)</div>
+                <div className={styles.feature}>✓ Daily Morning Email (8 AM delivery)</div>
                 <div className={styles.feature}>✓ Expert Pick Analysis (3-5 best bets daily)</div>
                 <div className={styles.feature}>✓ Clear Explanations (Why each pick makes sense)</div>
                 <div className={styles.feature}>✓ All Major Sports (NFL, NBA, MLB, NHL, Soccer)</div>

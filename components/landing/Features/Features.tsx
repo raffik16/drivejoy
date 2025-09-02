@@ -13,7 +13,7 @@ export function Features() {
             <h3 className={styles.featureTitle}>Advanced Statistical Modeling</h3>
             <p className={styles.featureDescription}>
               Comprehensive daily reports featuring edge detection, CLV analysis, Sharpe ratios, 
-              and Kelly criterion optimization. Professional-level insights delivered at 7 AM daily.
+              and Kelly criterion optimization. Professional-level insights delivered at 8 AM daily.
             </p>
             <div className={styles.featureDetails}>
               <div className={styles.detail}>✓ VaR analysis and portfolio risk metrics</div>

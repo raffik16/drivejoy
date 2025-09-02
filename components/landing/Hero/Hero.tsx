@@ -73,7 +73,7 @@ export function Hero() {
                 <span className={styles.highlight}>Betting Intelligence</span>
               </h1>
               <p className={styles.subtitle}>
-                Advanced statistical analysis and edge detection delivered daily at 7 AM. 
+                Advanced statistical analysis and edge detection delivered daily at 8 AM. 
                 Sophisticated modeling, CLV analysis, and professional-level insights for serious bettors.
               </p>
             </div>
@@ -81,16 +81,16 @@ export function Hero() {
             {/* Live Stats Preview - Desktop */}
             <div className={`${styles.liveStats} ${styles.desktopStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>1.85</span>
-                <span className={styles.statLabel}>Sharpe Ratio</span>
+                <span className={styles.statValue}>Daily</span>
+                <span className={styles.statLabel}>Expert Analysis</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>+12¢</span>
-                <span className={styles.statLabel}>Average CLV</span>
+                <span className={styles.statValue}>5</span>
+                <span className={styles.statLabel}>Major Sports</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>19.6%</span>
-                <span className={styles.statLabel}>Max detected edge</span>
+                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statLabel}>Free Trial</span>
               </div>
             </div>
 
@@ -120,16 +120,16 @@ export function Hero() {
             {/* Live Stats Preview - Mobile */}
             <div className={`${styles.liveStats} ${styles.mobileStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>1.85</span>
-                <span className={styles.statLabel}>Sharpe Ratio</span>
+                <span className={styles.statValue}>Daily</span>
+                <span className={styles.statLabel}>Expert Analysis</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>+12¢</span>
-                <span className={styles.statLabel}>Average CLV</span>
+                <span className={styles.statValue}>5</span>
+                <span className={styles.statLabel}>Major Sports</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>19.6%</span>
-                <span className={styles.statLabel}>Max detected edge</span>
+                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statLabel}>Free Trial</span>
               </div>
             </div>
 
@@ -140,7 +140,6 @@ export function Hero() {
                 onClick={() => setIsWaitlistOpen(true)}
               >
                 <span>Start Your 48-Hour Free Trial</span>
-                <span className={styles.buttonIcon}>📧</span>
               </button>
               <p className={styles.ctaNote}>
                 Get real daily emails • No credit card required
