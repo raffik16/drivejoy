@@ -44,9 +44,6 @@ Include clear identification that email contains commercial content related to s
   
   <p>You received this email because you subscribed to AICalledIT's daily newsletter service.</p>
   
-  <p><a href="{{unsubscribe_url}}" style="color: #007cba;">Unsubscribe from all emails</a> | 
-     <a href="mailto:support@aicalledit.com" style="color: #007cba;">Contact Support</a></p>
-  
   <p style="font-size: 11px; color: #999;">
     © 2025 AICalledIT. All rights reserved.<br>
     21+ Only. Gambling involves risk. Please gamble responsibly.

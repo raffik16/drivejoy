@@ -103,9 +103,6 @@ export async function sendWelcomeEmail({ email, waitlistPosition, referralCode }
                 You're receiving this because you joined our waitlist at 
                 <a href="${process.env.NEXT_PUBLIC_APP_URL || 'https://aicalledit.com'}" style="color: #1a73e8; text-decoration: none;">aicalledit.com</a>
               </p>
-              <p style="color: #999999; font-size: 12px; margin: 12px 0 0 0;">
-                <a href="#" style="color: #999999; text-decoration: underline;">Unsubscribe</a>
-              </p>
             </div>
           </div>
 
