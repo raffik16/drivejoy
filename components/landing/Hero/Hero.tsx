@@ -145,10 +145,10 @@ export function Hero() {
                 className={styles.primaryButton}
                 onClick={() => setIsWaitlistOpen(true)}
               >
-                <span>Start Your 48-Hour Free Trial</span>
+                <span>Get Early Access</span>
               </button>
               <p className={styles.ctaNote}>
-                Get real daily emails • No credit card required
+                No credit card required
               </p>
             </div>
 
@@ -156,15 +156,15 @@ export function Hero() {
             <div className={styles.trustIndicators}>
               <div className={styles.indicator}>
                 <span className={styles.icon}>📊</span>
-                <span>Statistical modeling & VaR analysis</span>
+                <span>Statistical Analysis</span>
               </div>
               <div className={styles.indicator}>
                 <span className={styles.icon}>⚡</span>
-                <span>Edge detection & CLV optimization</span>
+                <span>Edge Detection</span>
               </div>
               <div className={styles.indicator}>
                 <span className={styles.icon}>🎯</span>
-                <span>Professional-grade research</span>
+                <span>Pro Research</span>
               </div>
             </div>
           </div>

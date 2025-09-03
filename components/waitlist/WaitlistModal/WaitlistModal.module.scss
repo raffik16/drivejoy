@@ -40,9 +40,22 @@
 
 .input, .select {
   @include mixins.input-base;
+  color: white !important;
+  background: black !important;
+  border-color: #333 !important;
+  
+  &:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1) !important;
+  }
+  
+  &::placeholder {
+    color: #888 !important;
+  }
   
   &:disabled {
     opacity: 0.7;
+    background: #222 !important;
   }
 }
 
@@ -181,9 +194,17 @@
   
   .successTitle {
     color: var(--color-gray-900);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
     
     @include mixins.heading-2;
+  }
+  
+  .successMessage {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-base);
+    text-align: center;
+    margin-bottom: var(--space-8);
+    line-height: var(--line-height-relaxed);
   }
 }
 

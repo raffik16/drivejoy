@@ -265,7 +265,7 @@
 }
 
 .ctaNote {
-  margin-top: var(--space-3);
+  margin-top: var(--space-8);
   font-size: var(--font-size-sm);
   opacity: 0.7;
   
@@ -281,6 +281,7 @@
   justify-content: center;
   animation-delay: 1.2s;
   animation-fill-mode: both;
+  margin-bottom: 40px;
   
   @include mixins.fade-in(1s);
   

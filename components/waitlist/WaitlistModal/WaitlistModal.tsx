@@ -127,23 +127,6 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
               </select>
             </div>
 
-            <div className={styles.formGroup}>
-              <label htmlFor="referralCode" className={styles.label}>
-                Referral Code (Optional)
-              </label>
-              <input
-                type="text"
-                id="referralCode"
-                value={referralCode}
-                onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
-                placeholder="Enter code to skip ahead"
-                className={styles.input}
-                disabled={isLoading}
-              />
-              <p className={styles.hint}>
-                Have a friend's referral code? Enter it to jump ahead in line!
-              </p>
-            </div>
 
             <div className={styles.checkboxGroup}>
               <div className={styles.checkboxItem}>
@@ -228,43 +211,9 @@ export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
           <div className={styles.successIcon}>🎉</div>
           <h2 className={styles.successTitle}>You're On The List!</h2>
           
-          <div className={styles.positionCard}>
-            <div className={styles.positionNumber}>
-              #{waitlistData?.position}
-            </div>
-            <p className={styles.positionText}>
-              Your position on the waitlist
-            </p>
-          </div>
-
-          <div className={styles.referralSection}>
-            <h3 className={styles.referralTitle}>Skip Ahead in Line</h3>
-            <p className={styles.referralText}>
-              Refer friends to move up faster. Each referral moves you up 100 spots!
-            </p>
-            
-            <div className={styles.referralCode}>
-              <div className={styles.codeBox}>
-                <span className={styles.codeLabel}>Your Referral Code:</span>
-                <span className={styles.code}>{waitlistData?.referralCode}</span>
-              </div>
-              <button
-                onClick={copyReferralLink}
-                className={styles.copyButton}
-              >
-                Copy Link
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.socialShare}>
-            <p className={styles.shareText}>Share with friends:</p>
-            <div className={styles.shareButtons}>
-              <button className={styles.shareButton}>Twitter</button>
-              <button className={styles.shareButton}>LinkedIn</button>
-              <button className={styles.shareButton}>Facebook</button>
-            </div>
-          </div>
+          <p className={styles.successMessage}>
+            Thank you for joining! We'll send you an email with more information and notify you when early access is available.
+          </p>
 
           <div className={styles.successActions}>
             <button onClick={onClose} className={styles.primaryButton}>
