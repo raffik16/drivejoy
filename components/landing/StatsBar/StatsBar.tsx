@@ -11,28 +11,28 @@ interface Stat {
 
 const liveStats: Stat[] = [
   {
-    label: 'Win Rate',
-    value: '53%',
-    icon: '📈',
-    change: 'Beating the 52.4% break-even'
+    label: 'Time Saved Daily',
+    value: '3+ Hours',
+    icon: '⚡',
+    change: 'Research done for you'
   },
   {
-    label: 'Daily Coverage',
+    label: 'Daily Analysis',
     value: '15-20',
     icon: '⚽',
-    change: 'Games across all major sports'
+    change: 'Games analyzed across major sports'
   },
   {
     label: 'Analysis Time',
-    value: '4+ Hours',
+    value: '6+ Hours',
     icon: '🔬',
     change: 'Research done for you daily'
   },
   {
-    label: 'Member Success',
+    label: 'Day 1 Profits',
     value: '67%',
     icon: '📋',
-    change: 'Show profit after 30 days'
+    change: 'Success Rate'
   }
 ];
 
