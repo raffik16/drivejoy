@@ -77,16 +77,24 @@
 
 .title {
   margin-bottom: var(--space-6);
-  margin-top: var(--space-20);
   font-weight: var(--font-weight-extrabold);
   line-height: 1.1;
   font-size: var(--font-size-4xl);
+  margin-top: var(--space-5);
   
   @include mixins.fade-in(0.8s);
   @include mixins.heading-1;
   
   @include mixins.md {
     font-size: var(--font-size-5xl);
+    margin-top: 0;
+    margin-top: var(--space-20);
+  }
+
+  @include mixins.sm {
+    font-size: var(--font-size-5xl);
+    margin-top: 0;
+    margin-top: var(--space-20);
   }
   
   @include mixins.lg {
@@ -445,7 +453,7 @@
 @media (max-width: 640px) {
   .hero {
     min-height: 90vh;
-    padding-top: var(--space-12);
+    // padding-top: var(--space-12);
   }
   
   .container {
