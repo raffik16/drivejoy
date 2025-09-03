@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Logo from '@/components/branding/Logo/Logo';
+import { Logo } from '@/components/branding/Logo/Logo';
 import styles from './page.module.scss';
 
 export default function LogoShowcase() {
