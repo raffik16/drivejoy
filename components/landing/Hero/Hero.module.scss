@@ -220,15 +220,15 @@
 }
 
 .primaryButton {
+  @include mixins.button-base;
+  
   font-size: var(--font-size-lg);
   padding: var(--space-4) var(--space-8);
-  background: var(--color-warning);
-  color: var(--color-black);
+  background: #ff006e !important;
+  color: #ffffff !important;
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
-  
-  @include mixins.button-primary;
   
   &:hover {
     background: var(--color-warning);
@@ -253,6 +253,10 @@
   
   &:hover:before {
     left: 100%;
+  }
+  
+  @media (max-width: 640px) {
+    width: 100%;
   }
   
   @include mixins.md {
