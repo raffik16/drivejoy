@@ -19,18 +19,15 @@
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-12);
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
   margin-bottom: var(--space-8);
+  text-align: center;
 
   @include mixins.lg {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-    text-align: center;
-  }
-
-  @include mixins.sm {
-    gap: var(--space-6);
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    text-align: left;
   }
 }
 
@@ -50,17 +47,17 @@
 
 .links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8);
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
 
   @include mixins.md {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
 
-  @include mixins.sm {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
+  @include mixins.lg {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
   }
 }
 
