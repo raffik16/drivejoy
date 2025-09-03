@@ -30,7 +30,7 @@ export function PricingPreview() {
 
         <div className={styles.guarantee}>
           <div className={styles.guaranteeContent}>
-            <h4>Try Risk-Free for 48 Hours</h4>
+            <h4>Try Risk-Free for 3 Days</h4>
             <p>
               Full access. Real picks. See actual results before you pay.
             </p>

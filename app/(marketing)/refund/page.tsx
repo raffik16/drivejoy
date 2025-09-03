@@ -13,7 +13,7 @@ export default function RefundPage() {
           <section className={styles.section}>
             <h2>Free Trial Period</h2>
             <p>
-              We offer a 2-day (48-hour) free trial for all new subscribers. During this 
+              We offer a 3-day free trial for all new subscribers. During this 
               period, you will receive our daily email newsletters at no charge. You can 
               cancel anytime during the trial without being charged.
             </p>
@@ -149,7 +149,7 @@ export default function RefundPage() {
           <div className={styles.reminder}>
             <h3>Remember: Try Our Free Trial First!</h3>
             <p>
-              The best way to evaluate our email newsletter service is during the 2-day free trial. 
+              The best way to evaluate our email newsletter service is during the 3-day free trial. 
               You can review our daily analysis, email content quality, and delivery reliability 
               without any commitment. Cancel before the trial ends to avoid any charges.
             </p>

@@ -95,7 +95,7 @@ export function Hero() {
                 <span className={styles.statLabel}>Major Sports</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statValue}>3-Day</span>
                 <span className={styles.statLabel}>Free Trial</span>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function Hero() {
                 <span className={styles.statLabel}>Major Sports</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>2-Day</span>
+                <span className={styles.statValue}>3-Day</span>
                 <span className={styles.statLabel}>Free Trial</span>
               </div>
             </div>
