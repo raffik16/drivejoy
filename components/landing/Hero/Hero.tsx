@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { WaitlistModal } from '@/components/waitlist/WaitlistModal/WaitlistModal';
+import { Logo } from '@/components/branding/Logo';
 import styles from './Hero.module.scss';
 
 const demoCards = [
@@ -65,6 +66,11 @@ export function Hero() {
     <>
       <section className={styles.hero}>
         <div className={styles.container}>
+          {/* Header with Logo */}
+          <header className={styles.header}>
+            <Logo size="lg" variant="full" />
+          </header>
+          
           <div className={styles.content}>
             {/* Main Headlines */}
             <div className={styles.headlines}>

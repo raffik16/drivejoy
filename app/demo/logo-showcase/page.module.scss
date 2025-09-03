@@ -1,0 +1,474 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+    color: #6b7280;
+  }
+}
+
+// Interactive Controls
+.controls {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+  .controlGroup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    label {
+      font-weight: 600;
+      color: #374151;
+    }
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 0.5rem;
+    
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #e5e7eb;
+      background: white;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      
+      &:hover {
+        background: #f9fafb;
+      }
+      
+      &.active {
+        background: #4f46e5;
+        color: white;
+        border-color: #4f46e5;
+      }
+    }
+  }
+}
+
+// Main Display
+.mainDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  
+  .logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Concepts Grid
+.concepts {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .conceptGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .conceptCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+    }
+    
+    .logoBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
+      padding: 1.5rem;
+      background: #f9fafb;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .colorPalette {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      
+      div {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+// Size Comparison
+.sizeComparison {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .sizeGrid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    
+    .sizeItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      
+      span {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Usage Examples
+.usage {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .usageExample {
+    margin-bottom: 2rem;
+    
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .mockHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      
+      a {
+        color: #6b7280;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          color: #111827;
+        }
+      }
+      
+      button {
+        padding: 0.5rem 1rem;
+        background: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        
+        &:hover {
+          background: #4338ca;
+        }
+      }
+    }
+  }
+  
+  .mockMobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 375px;
+    
+    .menuButton {
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  .mockSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #1f2937;
+    border-radius: 8px;
+    max-width: 240px;
+    
+    .sidebarItem {
+      padding: 0.75rem 1rem;
+      color: #9ca3af;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      
+      &:hover {
+        background: #374151;
+        color: white;
+      }
+    }
+  }
+  
+  .mockFooter {
+    padding: 2rem;
+    background: #111827;
+    border-radius: 8px;
+    text-align: center;
+    
+    p {
+      margin-top: 1rem;
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// Theme Comparison
+.themeComparison {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .themeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    
+    .themeCard {
+      padding: 2rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      
+      &[data-theme="light"] {
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        
+        h3 {
+          color: #111827;
+        }
+      }
+      
+      &[data-theme="dark"] {
+        background: #1f2937;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        
+        h3 {
+          color: #f9fafb;
+        }
+      }
+      
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Typography
+.typography {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .typeSpecimen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    
+    .fontDisplay {
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      
+      h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #6b7280;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      .sampleText {
+        font-size: 2rem;
+        color: #111827;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+    }
+  }
+}
+
+// Implementation
+.implementation {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .codeBlock {
+    background: #1f2937;
+    border-radius: 12px;
+    padding: 2rem;
+    overflow-x: auto;
+    
+    pre {
+      color: #e5e7eb;
+      font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    
+    .controlGroup {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  
+  .concepts {
+    .conceptGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .sizeComparison {
+    .sizeGrid {
+      gap: 2rem;
+    }
+  }
+  
+  .themeComparison {
+    .themeGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .typography {
+    .typeSpecimen {
+      grid-template-columns: 1fr;
+    }
+  }
+}

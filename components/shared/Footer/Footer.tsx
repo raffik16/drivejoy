@@ -1,3 +1,4 @@
+import { Logo } from '@/components/branding/Logo';
 import styles from './Footer.module.scss';
 
 export function Footer() {
@@ -8,7 +9,7 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.brand}>
-            <h3 className={styles.brandName}>AICalledIT</h3>
+            <Logo size="md" variant="full" theme="dark" />
             <p className={styles.brandTagline}>
               Daily email newsletter with expert sports betting analysis
             </p>

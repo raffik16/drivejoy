@@ -39,6 +39,24 @@
   }
 }
 
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-8);
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  
+  @include mixins.fade-in(1s);
+  
+  @include mixins.lg {
+    justify-content: flex-start;
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+}
+
 .content {
   color: var(--color-white);
   z-index: 3;
