@@ -378,11 +378,32 @@
   background: var(--color-white);
   border-radius: var(--radius-xl);
   padding: var(--space-5);
-  box-shadow: var(--shadow-lg);
-  color: var(--color-gray-900);
+  // box-shadow: var(--shadow-lg);
+  color: #FFF;
   transition: var(--transition-base);
   flex-shrink: 0;
   min-height: 140px;
+  position: relative;
+
+  &::after {
+    content: 'SAMPLE MATCH';
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 0;
+    transform: translate(-30px, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.175);
+    letter-spacing: 3px;
+    pointer-events: none;
+    z-index: 1;
+    white-space: nowrap;
+
+    @media(max-width:767px) {
+      transform: translate(-25px, -50%);
+    }
+  }
   
   &:hover {
     transform: translateX(-5px);
