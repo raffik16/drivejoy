@@ -17,10 +17,10 @@ const liveStats: Stat[] = [
     change: 'Research done for you'
   },
   {
-    label: 'Daily Analysis',
-    value: '15-20',
+    label: 'Daily In-depth Analysis',
+    value: '5-10',
     icon: '⚽',
-    change: 'Games analyzed across major sports'
+    change: 'Games analyzed across major sports and college'
   },
   {
     label: 'Analysis Time',
