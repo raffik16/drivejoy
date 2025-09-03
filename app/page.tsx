@@ -3,6 +3,7 @@ import { StatsBar } from '@/components/landing/StatsBar/StatsBar';
 import { SocialProof } from '@/components/landing/SocialProof/SocialProof';
 import { Features } from '@/components/landing/Features/Features';
 import { PricingPreview } from '@/components/landing/PricingPreview/PricingPreview';
+import { ContactForm } from '@/components/shared/ContactForm/ContactForm';
 import styles from './page.module.scss';
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <SocialProof />
       <Features />
       <PricingPreview />
+      <ContactForm />
     </main>
   );
 }
