@@ -14,8 +14,8 @@ As an email newsletter service, AICalledIT must comply with the CAN-SPAM Act of 
 Every email must include our physical business address:
 ```
 AICalledIT
-[Your Delaware Business Address]
-Delaware, USA
+[Your Los Angeles, CA Business Address]
+Los Angeles, CA, USA
 ```
 
 ### 3. Clear Unsubscribe Mechanism
@@ -38,7 +38,7 @@ Include clear identification that email contains commercial content related to s
 ```html
 <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
   <p><strong>AICalledIT</strong> - Daily Sports Betting Analysis</p>
-  <p>[Your Delaware Business Address]<br>Delaware, USA</p>
+  <p>[Your Los Angeles, CA Business Address]<br>Los Angeles, CA, USA</p>
   
   <p>This email contains commercial content related to sports betting analysis and education.</p>
   

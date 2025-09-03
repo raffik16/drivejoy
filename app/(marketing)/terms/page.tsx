@@ -150,9 +150,9 @@ export default function TermsPage() {
           <section className={styles.section}>
             <h2>12. Governing Law</h2>
             <p>
-              These terms are governed by the laws of the State of Delaware, without regard 
+              These terms are governed by the laws of the State of California, without regard 
               to conflict of law principles. Any legal action must be brought in the state 
-              or federal courts located in Delaware.
+              or federal courts located in California.
             </p>
           </section>
 

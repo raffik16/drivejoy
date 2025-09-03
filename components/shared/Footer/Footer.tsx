@@ -96,7 +96,7 @@ export function Footer() {
           
           <div className={styles.copyright}>
             <p>© {currentYear} AICalledIT. All rights reserved.</p>
-            <p className={styles.location}>Delaware, USA</p>
+            <p className={styles.location}>Los Angeles, CA, USA</p>
           </div>
         </div>
       </div>
