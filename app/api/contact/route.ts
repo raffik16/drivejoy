@@ -2,6 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { resend } from '@/lib/email/client';
 
+// HTML escape function to prevent XSS
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 // Validation schema
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required').max(100, 'Name too long'),
@@ -23,20 +33,20 @@ export async function POST(request: NextRequest) {
       from: 'AICalledIT Contact <hello@aicalledit.com>',
       to: 'hello@aicalledit.com', // Your support email
       replyTo: email, // User's email for easy replies
-      subject: `Contact Form: ${subject}`,
+      subject: `Contact Form: ${escapeHtml(subject)}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #1a73e8; margin-bottom: 20px;">New Contact Form Submission</h2>
           
           <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Subject:</strong> ${subject}</p>
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
           </div>
           
           <div style="background: white; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
             <h3 style="margin-top: 0; color: #333;">Message:</h3>
-            <p style="white-space: pre-line; line-height: 1.6; color: #666;">${message}</p>
+            <p style="white-space: pre-line; line-height: 1.6; color: #666;">${escapeHtml(message)}</p>
           </div>
           
           <hr style="margin: 30px 0; border: none; border-top: 1px solid #e0e0e0;">
