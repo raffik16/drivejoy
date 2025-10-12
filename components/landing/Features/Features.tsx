@@ -39,7 +39,23 @@ export function Features() {
 
 
         </div>
-        
+
+        {/* CTA Section */}
+        <div className={styles.ctaSection}>
+          <h3 className={styles.ctaTitle}>Start Making Smarter Bets Today</h3>
+          <p className={styles.ctaText}>
+            Get professional-grade analysis delivered to your inbox every morning
+          </p>
+          <a
+            href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            Get Started Now
+          </a>
+        </div>
+
         {/* Disclaimer */}
         <div className={styles.disclaimer}>
           <p>

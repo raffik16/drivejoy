@@ -77,13 +77,78 @@
   gap: var(--space-2);
 }
 
+// CTA Section
+.ctaSection {
+  text-align: center;
+  margin: var(--space-12) 0;
+  padding: var(--space-8) var(--space-4);
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-xl);
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+
+  @include mixins.slide-up(0.8s);
+
+  @include mixins.lg {
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+.ctaTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+
+  @include mixins.lg {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.ctaText {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mixins.lg {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.ctaButton {
+  @include mixins.button-base;
+
+  display: inline-block;
+  font-size: var(--font-size-base);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+
+  &:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  @include mixins.lg {
+    font-size: var(--font-size-lg);
+    padding: var(--space-4) var(--space-8);
+  }
+}
+
 .disclaimer {
   background: var(--color-gray-50);
   border: 1px solid var(--color-gray-200);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   text-align: center;
-  
+
   p {
     color: var(--color-gray-700);
     font-size: var(--font-size-sm);

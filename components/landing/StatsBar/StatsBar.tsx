@@ -58,6 +58,21 @@ export function StatsBar() {
           ))}
         </div>
 
+        {/* CTA Section */}
+        <div className={styles.ctaSection}>
+          <p className={styles.ctaText}>
+            Professional insights delivered daily at 8 AM
+          </p>
+          <a
+            href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            Start Your Free Trial
+          </a>
+        </div>
+
       </div>
     </section>
   );

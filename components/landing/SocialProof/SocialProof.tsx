@@ -31,10 +31,26 @@ export function SocialProof() {
 
         <div className={styles.disclaimer}>
           <p>
-            <strong>Disclaimer:</strong> Individual results vary. Sports betting involves risk of loss. 
-            Testimonials reflect user experience with our analysis, not gambling outcomes. 
+            <strong>Disclaimer:</strong> Individual results vary. Sports betting involves risk of loss.
+            Testimonials reflect user experience with our analysis, not gambling outcomes.
             Past performance does not guarantee future results. Bet responsibly.
           </p>
+        </div>
+
+        {/* CTA Section */}
+        <div className={styles.ctaSection}>
+          <h3 className={styles.ctaTitle}>Ready to Join Winning Bettors?</h3>
+          <p className={styles.ctaText}>
+            Start with a 3-day free trial. No commitment required.
+          </p>
+          <a
+            href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            Try Risk-Free for 3 Days
+          </a>
         </div>
       </div>
     </section>

@@ -28,7 +28,7 @@ From Hero.tsx and Features.tsx components:
 - **"Simple, clear language"**
 - **"Educational approach"**
 - Service positioned for general betting audience
-- $59.99/month "Expert Insider" pricing
+- $19.99/month "Expert Insider" pricing
 
 ### Actual Delivered Content
 Highly technical terminology including:

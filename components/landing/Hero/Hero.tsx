@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { WaitlistModal } from '@/components/waitlist/WaitlistModal/WaitlistModal';
+import { useEffect } from 'react';
 import { Logo } from '@/components/branding/Logo';
 import styles from './Hero.module.scss';
 
@@ -51,15 +50,8 @@ const demoCards = [
 ];
 
 export function Hero() {
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCardIndex((prev) => (prev + 1) % demoCards.length);
-    }, 3000); // Change card every 3 seconds
-
-    return () => clearInterval(interval);
+    // Card animation logic can be added here if needed
   }, []);
 
   return (
@@ -141,14 +133,16 @@ export function Hero() {
 
             {/* Call-to-Action */}
             <div className={styles.cta}>
-              <button 
+              <a
+                href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.primaryButton}
-                onClick={() => setIsWaitlistOpen(true)}
               >
-                <span>Get Early Access</span>
-              </button>
+                <span>Start Your Free Trial</span>
+              </a>
               <p className={styles.ctaNote}>
-                No credit card required
+                3-day free trial • Cancel anytime
               </p>
             </div>
 
@@ -194,11 +188,6 @@ export function Hero() {
           </div>
         </div>
       </section>
-
-      <WaitlistModal 
-        isOpen={isWaitlistOpen}
-        onClose={() => setIsWaitlistOpen(false)}
-      />
     </>
   );
 }

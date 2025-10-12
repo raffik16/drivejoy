@@ -71,7 +71,7 @@ export async function sendWelcomeEmail({ email, waitlistPosition, referralCode }
                     <span style="color: #f9ab00; font-size: 18px; margin-right: 10px;">💰</span>
                     <div>
                       <strong style="color: #333333;">Simple Pricing:</strong>
-                      <span style="color: #666666;"> $59.99/month for all sports coverage</span>
+                      <span style="color: #666666;"> $19.99/month for all sports coverage</span>
                     </div>
                   </div>
                 </div>

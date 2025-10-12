@@ -11,7 +11,7 @@ export function PricingPreview() {
             <div className={styles.cardHeader}>
               <h3>Expert Insider</h3>
               <p className={styles.tagline}>Professional betting insights delivered daily</p>
-              <p className={styles.price}>$59.99<span className={styles.period}>/month</span></p>
+              <p className={styles.price}>$19.99<span className={styles.period}>/month</span></p>
             </div>
             <div className={styles.cardContent}>
               <p className={styles.description}>
@@ -24,19 +24,19 @@ export function PricingPreview() {
                 <div className={styles.feature}>✓ Clear Explanations (Why each pick makes sense)</div>
                 <div className={styles.feature}>✓ All Major Sports (NFL, NBA, MLB, NHL, Soccer)</div>
               </div>
+              <a
+                href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.cardButton}
+              >
+                Start 3-Day Free Trial
+              </a>
             </div>
           </div>
         </div>
 
-        <div className={styles.guarantee}>
-          <div className={styles.guaranteeContent}>
-            <h4>Try Risk-Free for 3 Days</h4>
-            <p>
-              Full access. Real picks. See actual results before you pay.
-            </p>
-          </div>
-        </div>
-
+       
         <div className={styles.disclaimer}>
           <p>
             <strong>Important:</strong> We help you make smarter bets, but can't guarantee wins. 

@@ -114,11 +114,76 @@
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   text-align: center;
-  
+  margin-bottom: var(--space-10);
+
   p {
     color: var(--color-gray-700);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-relaxed);
     margin: 0;
+  }
+}
+
+// CTA Section
+.ctaSection {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--radius-xl);
+  color: var(--color-white);
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+
+  @include mixins.fade-in(0.8s);
+
+  @include mixins.lg {
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+.ctaTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-3);
+
+  @include mixins.lg {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.ctaText {
+  font-size: var(--font-size-base);
+  opacity: 0.95;
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mixins.lg {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.ctaButton {
+  @include mixins.button-base;
+
+  display: inline-block;
+  font-size: var(--font-size-base);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  font-weight: var(--font-weight-semibold);
+  transition: var(--transition-base);
+
+  &:hover {
+    background: var(--color-gray-50);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  @include mixins.lg {
+    font-size: var(--font-size-lg);
+    padding: var(--space-4) var(--space-8);
   }
 }
