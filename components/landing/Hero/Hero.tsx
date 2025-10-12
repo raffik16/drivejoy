@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { Logo } from '@/components/branding/Logo';
+import { trackCTAClick } from '@/lib/analytics/gtag';
 import styles from './Hero.module.scss';
 
 const demoCards = [
@@ -138,6 +139,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primaryButton}
+                onClick={() => trackCTAClick('hero', 'Start Your Free Trial')}
               >
                 <span>Start Your Free Trial</span>
               </a>

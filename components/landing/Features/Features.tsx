@@ -1,3 +1,6 @@
+'use client';
+
+import { trackCTAClick } from '@/lib/analytics/gtag';
 import styles from './Features.module.scss';
 
 export function Features() {
@@ -51,6 +54,7 @@ export function Features() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
+            onClick={() => trackCTAClick('features', 'Get Started Now')}
           >
             Get Started Now
           </a>

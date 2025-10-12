@@ -1,3 +1,6 @@
+'use client';
+
+import { trackCTAClick } from '@/lib/analytics/gtag';
 import styles from './PricingPreview.module.scss';
 
 export function PricingPreview() {
@@ -29,6 +32,7 @@ export function PricingPreview() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.cardButton}
+                onClick={() => trackCTAClick('pricing_card', 'Start 3-Day Free Trial')}
               >
                 Start 3-Day Free Trial
               </a>

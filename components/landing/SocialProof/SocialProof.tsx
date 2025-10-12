@@ -1,3 +1,6 @@
+'use client';
+
+import { trackCTAClick } from '@/lib/analytics/gtag';
 import styles from './SocialProof.module.scss';
 
 export function SocialProof() {
@@ -48,6 +51,7 @@ export function SocialProof() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
+            onClick={() => trackCTAClick('social_proof', 'Try Risk-Free for 3 Days')}
           >
             Try Risk-Free for 3 Days
           </a>

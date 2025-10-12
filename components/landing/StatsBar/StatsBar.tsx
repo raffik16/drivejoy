@@ -1,5 +1,6 @@
 'use client';
 
+import { trackCTAClick } from '@/lib/analytics/gtag';
 import styles from './StatsBar.module.scss';
 
 interface Stat {
@@ -68,6 +69,7 @@ export function StatsBar() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
+            onClick={() => trackCTAClick('statsbar', 'Start Your Free Trial')}
           >
             Start Your Free Trial
           </a>
