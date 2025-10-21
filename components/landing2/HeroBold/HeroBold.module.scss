@@ -107,6 +107,7 @@
   line-height: var(--line-height-tight);
   margin-bottom: var(--space-6);
   letter-spacing: -0.03em;
+  color: var(--color-white);
 
   @include mixins.md {
     font-size: 5rem;
