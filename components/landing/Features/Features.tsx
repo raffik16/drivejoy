@@ -7,7 +7,7 @@ export function Features() {
   return (
     <section className={styles.features}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Professional-Grade Daily Analysis</h2>
+        <h2 className={styles.title}>Why Winning Bettors Choose AICalledIT</h2>
         <div className={styles.featureGrid}>
           
           {/* Daily Email Service */}
@@ -45,18 +45,18 @@ export function Features() {
 
         {/* CTA Section */}
         <div className={styles.ctaSection}>
-          <h3 className={styles.ctaTitle}>Start Making Smarter Bets Today</h3>
+          <h3 className={styles.ctaTitle}>Join 1000+ Winning Bettors</h3>
           <p className={styles.ctaText}>
-            Get professional-grade analysis delivered to your inbox every morning
+            Get the same professional intelligence sharp bettors use. Start your free 3-day trial now.
           </p>
           <a
             href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
-            onClick={() => trackCTAClick('features', 'Get Started Now')}
+            onClick={() => trackCTAClick('features', 'Start Winning Today - Free Trial')}
           >
-            Get Started Now
+            Start Winning Today - Free Trial
           </a>
         </div>
 
