@@ -19,15 +19,15 @@ export function PricingPreview() {
             </div>
             <div className={styles.cardContent}>
               <p className={styles.description}>
-                The same professional-grade analysis that sharp bettors pay thousands for.
-                Wake up to winning insights delivered to your inbox at 8 AM every day.
+                Save 3+ hours daily with professional analysis delivered to your inbox at 8 AM.
+                Get 5-10 expertly analyzed games across all major sports with a 67% success rate.
               </p>
               <div className={styles.features}>
-                <div className={styles.feature}>✓ Daily Analysis Delivered at 8 AM</div>
+                <div className={styles.feature}>✓ Save 3+ Hours Daily - Research done for you</div>
+                <div className={styles.feature}>✓ 5-10 Games Analyzed Daily across major sports & college</div>
+                <div className={styles.feature}>✓ 6+ Hours of Analysis Time per report</div>
+                <div className={styles.feature}>✓ 67% Day 1 Success Rate - Proven results</div>
                 <div className={styles.feature}>✓ Advanced Edge Detection & CLV Tracking</div>
-                <div className={styles.feature}>✓ Statistical Modeling & Market Analysis</div>
-                <div className={styles.feature}>✓ All Major Sports (NFL, NBA, MLB, NHL, Soccer)</div>
-                <div className={styles.feature}>✓ Professional Research & Insights</div>
                 <div className={styles.feature}>✓ Cancel Anytime, No Questions Asked</div>
               </div>
               <a
@@ -39,7 +39,7 @@ export function PricingPreview() {
               >
                 Claim Your 3-Day Free Trial
               </a>
-              <p className={styles.guarantee}>No credit card required • Instant access</p>
+              <p className={styles.guarantee}>Instant access • Cancel anytime</p>
             </div>
           </div>
         </div>

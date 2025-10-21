@@ -10,33 +10,33 @@ export function Features() {
         <h2 className={styles.title}>Why Winning Bettors Choose AICalledIT</h2>
         <div className={styles.featureGrid}>
           
-          {/* Daily Email Service */}
+          {/* Time Savings */}
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>📊</div>
-            <h3 className={styles.featureTitle}>Advanced Statistical Modeling</h3>
+            <div className={styles.featureIcon}>⏰</div>
+            <h3 className={styles.featureTitle}>Save 3+ Hours Daily</h3>
             <p className={styles.featureDescription}>
-              Comprehensive daily reports featuring edge detection, CLV analysis, Sharpe ratios, 
-              and Kelly criterion optimization. Professional-level insights delivered at 8 AM daily.
+              Skip the research grind. We spend 6+ hours daily analyzing games so you don't have to.
+              Wake up to 5-10 expertly analyzed picks delivered at 8 AM sharp, ready to act on.
             </p>
             <div className={styles.featureDetails}>
-              <div className={styles.detail}>✓ VaR analysis and portfolio risk metrics</div>
-              <div className={styles.detail}>✓ Closing Line Value (CLV) tracking</div>
-              <div className={styles.detail}>✓ Statistical significance testing</div>
+              <div className={styles.detail}>✓ 6+ hours of research per daily report</div>
+              <div className={styles.detail}>✓ 5-10 games analyzed across major sports & college</div>
+              <div className={styles.detail}>✓ Delivered at 8 AM - act fast on the best lines</div>
             </div>
           </div>
 
-          {/* Technical Analysis */}
+          {/* Proven Results */}
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>⚡</div>
-            <h3 className={styles.featureTitle}>Edge Detection & Market Analysis</h3>
+            <div className={styles.featureIcon}>🏆</div>
+            <h3 className={styles.featureTitle}>67% Day 1 Success Rate</h3>
             <p className={styles.featureDescription}>
-              Sophisticated algorithms identify reverse line movement, steam detection, 
-              and market inefficiencies. Advanced analytics typically reserved for professional operations.
+              We don't just share picks - we share winners. Advanced edge detection, CLV tracking,
+              and statistical modeling give you the same advantage sharp bettors pay thousands for.
             </p>
             <div className={styles.featureDetails}>
-              <div className={styles.detail}>✓ Steam and reverse line movement alerts</div>
-              <div className={styles.detail}>✓ Market efficiency scoring</div>
-              <div className={styles.detail}>✓ Sharp money identification</div>
+              <div className={styles.detail}>✓ Proven 67% success rate from day one</div>
+              <div className={styles.detail}>✓ Edge detection on every game analyzed</div>
+              <div className={styles.detail}>✓ Professional-grade CLV tracking</div>
             </div>
           </div>
 
@@ -45,18 +45,18 @@ export function Features() {
 
         {/* CTA Section */}
         <div className={styles.ctaSection}>
-          <h3 className={styles.ctaTitle}>Join 1000+ Winning Bettors</h3>
+          <h3 className={styles.ctaTitle}>Start Winning with 67% Success Rate</h3>
           <p className={styles.ctaText}>
-            Get the same professional intelligence sharp bettors use. Start your free 3-day trial now.
+            Save 3+ hours daily and get 5-10 expertly analyzed games delivered at 8 AM. Join now and see results from day one.
           </p>
           <a
             href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
-            onClick={() => trackCTAClick('features', 'Start Winning Today - Free Trial')}
+            onClick={() => trackCTAClick('features', 'Start Your 3-Day Free Trial')}
           >
-            Start Winning Today - Free Trial
+            Start Your 3-Day Free Trial
           </a>
         </div>
 

@@ -80,16 +80,16 @@ export function Hero() {
             {/* Live Stats Preview - Desktop */}
             <div className={`${styles.liveStats} ${styles.desktopStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>3+ Hours</span>
+                <span className={styles.statLabel}>Time Saved Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>5-10</span>
+                <span className={styles.statLabel}>Games Analyzed Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>3-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>67%</span>
+                <span className={styles.statLabel}>Day 1 Success Rate</span>
               </div>
             </div>
 
@@ -119,16 +119,16 @@ export function Hero() {
             {/* Live Stats Preview - Mobile */}
             <div className={`${styles.liveStats} ${styles.mobileStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>3+ Hours</span>
+                <span className={styles.statLabel}>Time Saved Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>5-10</span>
+                <span className={styles.statLabel}>Games Analyzed Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>3-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>67%</span>
+                <span className={styles.statLabel}>Day 1 Success Rate</span>
               </div>
             </div>
 
@@ -144,23 +144,23 @@ export function Hero() {
                 <span>Get Your Edge - Start Free Trial</span>
               </a>
               <p className={styles.ctaNote}>
-                Start winning today • 3-day free trial • No credit card required • Cancel anytime
+                3-day free trial • Cancel anytime
               </p>
             </div>
 
             {/* Trust Indicators */}
             <div className={styles.trustIndicators}>
               <div className={styles.indicator}>
-                <span className={styles.icon}>📊</span>
-                <span>1000+ Active Members</span>
+                <span className={styles.icon}>⏰</span>
+                <span>6+ Hours Research Daily</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>⚡</span>
-                <span>Daily 8 AM Delivery</span>
+                <span className={styles.icon}>📧</span>
+                <span>Delivered 8 AM Sharp</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>🎯</span>
-                <span>All Major Sports</span>
+                <span className={styles.icon}>🏆</span>
+                <span>67% Win Rate</span>
               </div>
             </div>
           </div>
