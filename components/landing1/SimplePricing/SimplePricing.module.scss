@@ -1,0 +1,179 @@
+@use '../../../styles/mixins' as mixins;
+
+.pricing {
+  padding: var(--space-20) 0;
+  background: var(--color-white);
+}
+
+.container {
+  @include mixins.container;
+  max-width: 900px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.title {
+  @include mixins.heading-2;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-4);
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle {
+  @include mixins.body-large;
+  color: var(--color-gray-600);
+}
+
+.pricingCard {
+  position: relative;
+  padding: var(--space-10);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--color-primary);
+  margin-bottom: var(--space-12);
+
+  @include mixins.md {
+    padding: var(--space-12);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-2) var(--space-6);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.planName {
+  @include mixins.heading-3;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.planDescription {
+  @include mixins.body-base;
+  color: var(--color-gray-600);
+}
+
+.priceSection {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1;
+}
+
+.currency {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-top: var(--space-2);
+}
+
+.amount {
+  font-size: 5rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-primary);
+  margin: 0 var(--space-1);
+
+  @include mixins.md {
+    font-size: 6rem;
+  }
+}
+
+.period {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-600);
+  align-self: flex-end;
+  margin-bottom: var(--space-3);
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-10) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-success);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  margin-top: 2px;
+}
+
+.ctaButton {
+  @include mixins.button-primary;
+  width: 100%;
+  padding: var(--space-5) var(--space-8);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+
+  &:hover {
+    box-shadow: var(--shadow-2xl);
+    transform: translateY(-2px);
+  }
+}
+
+.guarantee {
+  text-align: center;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.disclaimer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-6);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-xl);
+  text-align: center;
+
+  p {
+    @include mixins.body-sm;
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../styles/mixins' as mixins;
+
+.main {
+  min-height: 100vh;
+  background: var(--color-white);
+  scroll-behavior: smooth;
+
+  @include mixins.fade-in(0.5s);
+}
