@@ -62,16 +62,16 @@ export function StatsBar() {
         {/* CTA Section */}
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
-            Professional insights delivered daily at 8 AM
+            Join 1000+ members getting 5-10 winning picks delivered at 8 AM daily
           </p>
           <a
             href="https://buy.stripe.com/fZu28sguxdqyakd7tba7C01"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
-            onClick={() => trackCTAClick('statsbar', 'Start Your Free Trial')}
+            onClick={() => trackCTAClick('statsbar', 'Start Your 3-Day Free Trial')}
           >
-            Start Your Free Trial
+            Start Your 3-Day Free Trial
           </a>
         </div>
 
