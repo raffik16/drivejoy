@@ -26,7 +26,11 @@ export type ButtonLocation =
   | 'features'
   | 'pricing_card'
   | 'pricing_guarantee'
-  | 'contact_alt';
+  | 'contact_alt'
+  | 'hero_minimal'
+  | 'hero_bold'
+  | 'pricing_simple'
+  | 'pricing_dynamic';
 
 /**
  * Track CTA button clicks (consolidated event)
