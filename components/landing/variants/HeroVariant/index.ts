@@ -1,0 +1,1 @@
+export { HeroVariant } from './HeroVariant';

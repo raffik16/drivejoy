@@ -1,0 +1,206 @@
+@use '../../../styles/mixins' as *;
+
+.main {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #fad0c4 100%);
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+
+  // 3D floating shapes
+  &::before {
+    content: '◆';
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.3);
+    animation: isometricFloat 8s ease-in-out infinite;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '▲';
+    position: fixed;
+    bottom: 15%;
+    right: 10%;
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.3);
+    animation: isometricFloat 10s ease-in-out infinite reverse;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // Isometric grid pattern
+  & > *:first-child {
+    &::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(30deg, rgba(255, 255, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05)),
+        linear-gradient(150deg, rgba(255, 255, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05)),
+        linear-gradient(30deg, rgba(255, 255, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05)),
+        linear-gradient(150deg, rgba(255, 255, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05));
+      background-size: 80px 140px;
+      background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+
+  // Playful bounce animations
+  & > section {
+    position: relative;
+    z-index: 1;
+    animation: playfulBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) backwards;
+    transform-style: preserve-3d;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.45s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.6s;
+    }
+
+    // Add 3D tilt on hover
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateZ(20px);
+    }
+  }
+
+  // Additional floating elements
+  & > section:nth-child(2) {
+    &::before {
+      content: '●';
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.2);
+      animation: isometricFloat 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+  }
+
+  & > section:nth-child(4) {
+    &::before {
+      content: '■';
+      position: absolute;
+      bottom: 20%;
+      left: 8%;
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.2);
+      animation: isometricFloat 9s ease-in-out infinite reverse;
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes isometricFloat {
+  0%, 100% {
+    transform:
+      perspective(1000px)
+      translateY(0)
+      translateX(0)
+      rotateX(0deg)
+      rotateY(0deg)
+      rotateZ(0deg);
+  }
+  25% {
+    transform:
+      perspective(1000px)
+      translateY(-30px)
+      translateX(20px)
+      rotateX(10deg)
+      rotateY(10deg)
+      rotateZ(5deg);
+  }
+  50% {
+    transform:
+      perspective(1000px)
+      translateY(-50px)
+      translateX(0)
+      rotateX(0deg)
+      rotateY(20deg)
+      rotateZ(0deg);
+  }
+  75% {
+    transform:
+      perspective(1000px)
+      translateY(-30px)
+      translateX(-20px)
+      rotateX(-10deg)
+      rotateY(10deg)
+      rotateZ(-5deg);
+  }
+}
+
+@keyframes playfulBounce {
+  0% {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      scale(0.5)
+      rotateX(-20deg)
+      rotateY(20deg)
+      translateY(100px)
+      translateZ(-200px);
+  }
+  60% {
+    transform:
+      perspective(1000px)
+      scale(1.1)
+      rotateX(5deg)
+      rotateY(-5deg)
+      translateY(-20px)
+      translateZ(20px);
+  }
+  100% {
+    opacity: 1;
+    transform:
+      perspective(1000px)
+      scale(1)
+      rotateX(0deg)
+      rotateY(0deg)
+      translateY(0)
+      translateZ(0);
+  }
+}
+
+// Add wobble on hover for extra playfulness
+.main > section {
+  &:hover {
+    animation: wobble 0.5s ease-in-out;
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: perspective(1000px) rotateZ(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateZ(-2deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateZ(2deg);
+  }
+}

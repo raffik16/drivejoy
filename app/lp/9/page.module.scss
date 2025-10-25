@@ -1,0 +1,154 @@
+@use '../../../styles/mixins' as *;
+
+.main {
+  min-height: 100vh;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+
+  // Cinematic vignette
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  // Animated gradient overlay (simulating video ambiance)
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      45deg,
+      rgba(30, 60, 114, 0.3),
+      rgba(42, 82, 152, 0.2),
+      rgba(30, 60, 114, 0.3)
+    );
+    background-size: 400% 400%;
+    animation: ambientMove 20s ease infinite;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  // Cinematic letterbox bars
+  & > section:first-child {
+    &::before,
+    &::after {
+      content: '';
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: #000;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    &::after {
+      bottom: 0;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  // Cinematic fade-in for sections
+  & > section {
+    position: relative;
+    z-index: 1;
+    animation: cinematicFade 1.5s ease-out backwards;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+  }
+
+  // Subtle film grain effect
+  & > section {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.1;
+      animation: grainMove 0.5s steps(4) infinite;
+    }
+  }
+}
+
+@keyframes ambientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cinematicFade {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+    filter: blur(10px) brightness(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+@keyframes grainMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2%, 2%);
+  }
+  50% {
+    transform: translate(2%, -2%);
+  }
+  75% {
+    transform: translate(-2%, -2%);
+  }
+}
+
+// Spotlight effect on scroll
+.main > section {
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

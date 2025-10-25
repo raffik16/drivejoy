@@ -1,0 +1,124 @@
+@use '../../../styles/mixins' as *;
+
+.main {
+  min-height: 100vh;
+  background: #0d0221;
+  position: relative;
+  overflow-x: hidden;
+
+  // Cyberpunk neon grid
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(rgba(255, 0, 128, 0.1) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 100px 100px;
+    pointer-events: none;
+    z-index: 0;
+    animation: neonGridMove 10s linear infinite;
+  }
+
+  // Glowing orbs
+  &::after {
+    content: '';
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 0, 128, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: orbFloat 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  & > section {
+    position: relative;
+    z-index: 1;
+    animation: neonEntry 0.8s cubic-bezier(0.23, 1, 0.32, 1) backwards;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+// Additional neon orb
+.main {
+  & > *:first-child {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(121, 40, 202, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(60px);
+      animation: orbFloat 12s ease-in-out infinite reverse;
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+}
+
+@keyframes neonGridMove {
+  0% {
+    transform: perspective(500px) rotateX(60deg) translateY(0);
+  }
+  100% {
+    transform: perspective(500px) rotateX(60deg) translateY(100px);
+  }
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(0, -60px) scale(1);
+  }
+  75% {
+    transform: translate(-30px, -30px) scale(0.9);
+  }
+}
+
+@keyframes neonEntry {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(10px) brightness(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0) brightness(1);
+  }
+}

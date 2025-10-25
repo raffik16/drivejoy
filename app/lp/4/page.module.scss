@@ -1,0 +1,81 @@
+@use '../../../styles/mixins' as *;
+
+.main {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fff5f5 0%, #ffe9e9 50%, #fff 100%);
+
+  // Storytelling scroll animations
+  & > section {
+    opacity: 0;
+    animation: storyReveal 1s ease-out forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+  }
+
+  // Soft parallax effect
+  perspective: 1000px;
+
+  & > section {
+    transform-style: preserve-3d;
+
+    &:nth-child(even) {
+      animation: storyRevealLeft 1s ease-out forwards;
+    }
+  }
+}
+
+@keyframes storyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px) translateZ(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes storyRevealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) translateZ(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+// Add smooth scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Progressive reveal on scroll
+@media (prefers-reduced-motion: no-preference) {
+  .main > section {
+    animation-play-state: paused;
+  }
+
+  .main > section[data-visible="true"] {
+    animation-play-state: running;
+  }
+}

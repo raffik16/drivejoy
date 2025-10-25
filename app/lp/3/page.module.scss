@@ -1,0 +1,92 @@
+@use '../../../styles/mixins' as *;
+
+.main {
+  min-height: 100vh;
+  background: #0a1929;
+
+  // Dashboard-style grid overlay
+  position: relative;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(rgba(0, 200, 83, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 200, 83, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridMove 20s linear infinite;
+  }
+
+  // Scanline effect
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00c853, transparent);
+    animation: scanline 3s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  & > section {
+    position: relative;
+    z-index: 1;
+    animation: dataFade 0.5s ease-out backwards;
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes dataFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}

@@ -1,0 +1,1 @@
+export { SocialProofVariant } from './SocialProofVariant';
