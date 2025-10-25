@@ -41,7 +41,7 @@ export function PricingVariant({ content, variant, className }: PricingVariantPr
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
-            onClick={() => trackCTAClick(`pricing-${variant}`, 'Start 3-Day Free Trial')}
+            onClick={() => trackCTAClick('pricing_card', 'Start 3-Day Free Trial')}
           >
             Start 3-Day Free Trial
           </a>

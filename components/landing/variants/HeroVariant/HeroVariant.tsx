@@ -30,7 +30,7 @@ export function HeroVariant({ content, variant, className }: HeroVariantProps) {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.primaryCta}
-              onClick={() => trackCTAClick(`hero-${variant}`, content.hero.cta)}
+              onClick={() => trackCTAClick('hero', content.hero.cta)}
             >
               {content.hero.cta}
             </a>
