@@ -63,19 +63,3 @@
     transform: translateX(0) translateZ(0);
   }
 }
-
-// Add smooth scroll behavior
-html {
-  scroll-behavior: smooth;
-}
-
-// Progressive reveal on scroll
-@media (prefers-reduced-motion: no-preference) {
-  .main > section {
-    animation-play-state: paused;
-  }
-
-  .main > section[data-visible="true"] {
-    animation-play-state: running;
-  }
-}

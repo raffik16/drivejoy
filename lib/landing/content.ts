@@ -518,7 +518,7 @@ export const lp9Content: LandingContent = {
     { value: 'Learn', label: 'The Process', description: 'Understand why' },
     { value: 'Apply', label: 'Daily', description: 'Use insights' },
     { value: 'Win', label: 'More Often', description: 'Better results' }
-  },
+  ],
   features: [
     {
       title: 'Transparent Process',
