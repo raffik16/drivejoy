@@ -1,0 +1,189 @@
+@use '../../../styles/mixins' as mixins;
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #fafbfc 0%, #f0f4f8 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(26, 115, 232, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+}
+
+.container {
+  @include mixins.container;
+  position: relative;
+  z-index: 1;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.header {
+  margin-bottom: var(--space-12);
+
+  @include mixins.md {
+    margin-bottom: var(--space-16);
+  }
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-8);
+  animation: slideDown 0.6s ease-out;
+}
+
+.badgeIcon {
+  font-size: var(--font-size-base);
+}
+
+.title {
+  @include mixins.heading-1;
+  font-weight: var(--font-weight-black);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.03em;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+
+  @include mixins.md {
+    font-size: 4.5rem;
+  }
+}
+
+.gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  @include mixins.body-large;
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-10);
+  line-height: var(--line-height-relaxed);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.ctaGroup {
+  margin-bottom: var(--space-12);
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.primaryCta {
+  @include mixins.button-primary;
+  padding: var(--space-4) var(--space-10);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+
+  &:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+  }
+}
+
+.ctaNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.checkmark {
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.quickStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-base);
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+
+  @include mixins.md {
+    gap: var(--space-12);
+  }
+}
+
+.quickStat {
+  text-align: center;
+}
+
+.statValue {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.statLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-gray-200);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
