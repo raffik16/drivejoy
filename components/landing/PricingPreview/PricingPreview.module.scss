@@ -97,6 +97,14 @@
   color: var(--color-gray-600);
 }
 
+.savings {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
 .cardContent {
   padding: var(--space-8);
 }
@@ -149,12 +157,11 @@
 }
 
 .guarantee {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: var(--color-white);
-  border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-top: var(--space-3);
   text-align: center;
-  margin-bottom: var(--space-8);
+  font-style: italic;
 }
 
 .guaranteeContent {

@@ -68,28 +68,28 @@ export function Hero() {
             {/* Main Headlines */}
             <div className={styles.headlines}>
               <h1 className={styles.title}>
-                Professional-Grade{' '}
-                <span className={styles.highlight}>Betting Intelligence</span>
+                Stop Guessing.{' '}
+                <span className={styles.highlight}>Start Winning.</span>
               </h1>
               <p className={styles.subtitle}>
-                Advanced statistical analysis and edge detection delivered daily at 8 AM. 
-                Sophisticated modeling, CLV analysis, and professional-level insights for serious bettors.
+                Get professional-grade betting intelligence delivered at 8 AM daily. Advanced edge detection,
+                statistical modeling, and CLV analysis that gives you the edge sharp bettors use to win consistently.
               </p>
             </div>
 
             {/* Live Stats Preview - Desktop */}
             <div className={`${styles.liveStats} ${styles.desktopStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>3+ Hours</span>
+                <span className={styles.statLabel}>Time Saved Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>5-10</span>
+                <span className={styles.statLabel}>Games Analyzed Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>3-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>67%</span>
+                <span className={styles.statLabel}>Day 1 Success Rate</span>
               </div>
             </div>
 
@@ -119,16 +119,16 @@ export function Hero() {
             {/* Live Stats Preview - Mobile */}
             <div className={`${styles.liveStats} ${styles.mobileStats}`}>
               <div className={styles.stat}>
-                <span className={styles.statValue}>Daily</span>
-                <span className={styles.statLabel}>Expert Analysis</span>
+                <span className={styles.statValue}>3+ Hours</span>
+                <span className={styles.statLabel}>Time Saved Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>5</span>
-                <span className={styles.statLabel}>Major Sports</span>
+                <span className={styles.statValue}>5-10</span>
+                <span className={styles.statLabel}>Games Analyzed Daily</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statValue}>3-Day</span>
-                <span className={styles.statLabel}>Free Trial</span>
+                <span className={styles.statValue}>67%</span>
+                <span className={styles.statLabel}>Day 1 Success Rate</span>
               </div>
             </div>
 
@@ -139,9 +139,9 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.primaryButton}
-                onClick={() => trackCTAClick('hero', 'Start Your Free Trial')}
+                onClick={() => trackCTAClick('hero', 'Get Your Edge - Start Free Trial')}
               >
-                <span>Start Your Free Trial</span>
+                <span>Get Your Edge - Start Free Trial</span>
               </a>
               <p className={styles.ctaNote}>
                 3-day free trial • Cancel anytime
@@ -151,16 +151,16 @@ export function Hero() {
             {/* Trust Indicators */}
             <div className={styles.trustIndicators}>
               <div className={styles.indicator}>
-                <span className={styles.icon}>📊</span>
-                <span>Statistical Analysis</span>
+                <span className={styles.icon}>⏰</span>
+                <span>6+ Hours Research Daily</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>⚡</span>
-                <span>Edge Detection</span>
+                <span className={styles.icon}>📧</span>
+                <span>Delivered 8 AM Sharp</span>
               </div>
               <div className={styles.indicator}>
-                <span className={styles.icon}>🎯</span>
-                <span>Pro Research</span>
+                <span className={styles.icon}>🏆</span>
+                <span>67% Win Rate</span>
               </div>
             </div>
           </div>
